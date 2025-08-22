@@ -60,35 +60,6 @@
 #sevice section.last {
     margin-bottom: 0;
 }
-/* ----- Tablet ----- */
-@media only screen and (min-width: 760px) {
-    #sevice {
-        margin-bottom: 80px;
-    }
-    #sevice section {
-        width: 32%;
-        margin-right: 2%;
-        margin-bottom: 0;
-    }
-    #sevice section.last {
-        margin-right: 0;
-    }
-}
-/* ----- PC ----- */
-@media only screen and (min-width: 961px) {
-    #sevice {
-        max-width: 960px;
-        margin: 0 auto 100px;
-        text-align: center;
-    }
-    #sevice section {
-        width: 30%;
-        margin-right: 5%;
-    }
-    #sevice section.last {
-        margin-right: 0;
-    }
-}
 
 /* ====================================
 // ABOUT PAGE
@@ -169,6 +140,7 @@
 /* ====================================
 // Media Queries
 // ==================================== */
+/* ----- Tablet ----- */
 @media only screen and (min-width: 760px) {
 
     /* Top Page */
@@ -186,6 +158,19 @@
     }
     #mainVisual .sp {
         display: none;
+    }
+    
+    /* SERVICE SECTION */
+    #sevice {
+        margin-bottom: 80px;
+    }
+    #sevice section {
+        width: 32%;
+        margin-right: 2%;
+        margin-bottom: 0;
+    }
+    #sevice section.last {
+        margin-right: 0;
     }
     
     /* About Page */
@@ -231,7 +216,22 @@
 
 } /* min-width: 760px */
 
+/* ----- PC ----- */
 @media only screen and (min-width: 961px) {
+    
+    /* SERVICE SECTION */
+    #sevice {
+        max-width: 960px;
+        margin: 0 auto 100px;
+        text-align: center;
+    }
+    #sevice section {
+        width: 30%;
+        margin-right: 5%;
+    }
+    #sevice section.last {
+        margin-right: 0;
+    }
     
     /* About Page */
     .fBox01 {
@@ -261,4 +261,7 @@
     #worksList li:nth-child(2n) {
         margin-right: 5%;
     }
-    #works
+    #worksList li:nth-child(3n) {
+        margin-right: 0;
+    }
+}

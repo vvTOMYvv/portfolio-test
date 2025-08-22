@@ -22,42 +22,82 @@
 /* ====================================
 // SERVICE SECTION
 // ==================================== */
-/* 親要素にflexboxを適用 */
 #service {
     text-align: center;
     margin-bottom: 60px;
     padding: 0 5%; /* スマホ表示でも左右に余白を追加 */
 }
-#service section {
-    width: 100%; /* スマホでは1カラム */
+#service .ttl { /* 見出しのスタイルはここに */
+    margin-bottom: 30px; /* 見出しとカラムの間の余白 */
+}
+
+/* ↓↓↓ スマホでは縦並び（デフォルト） ↓↓↓ */
+.service-container section {
+    width: 100%;
     margin-bottom: 30px;
     box-sizing: border-box;
 }
-#service section .ttl {
+
+.service-container section .ttl {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 5px;
 }
-#service section p.ttl {
+.service-container section p.ttl {
     font-size: 14px;
     font-weight: normal;
     color: #a5a5a5;
     margin-bottom: 10px;
 }
-#service section .icon {
+.service-container section .icon {
     margin-bottom: 20px;
 }
-#service section .icon img {
+.service-container section .icon img {
     width: 60px;
     height: auto;
 }
-#service section .text01 {
+.service-container section .text01 {
     font-size: 14px;
     line-height: 1.6;
     text-align: left;
 }
-#service section.last {
+.service-container section.last {
     margin-bottom: 0;
+}
+
+
+/* ----- Tablet (760px以上) ----- */
+@media only screen and (min-width: 760px) {
+    #service {
+        max-width: 960px;
+        margin: 0 auto 80px;
+        padding: 0 20px;
+    }
+
+    /* ↓↓↓ 横並びの指定を service-container に適用 ↓↓↓ */
+    .service-container {
+        display: flex;
+        justify-content: center;
+        gap: 2%;
+        text-align: center;
+    }
+    .service-container section {
+        width: 32%;
+        margin-bottom: 0;
+    }
+}
+
+/* ----- PC (961px以上) ----- */
+@media only screen and (min-width: 961px) {
+    #service {
+        margin-bottom: 100px;
+    }
+    .service-container {
+        gap: 5%; /* PCでは隙間を広げる */
+    }
+    .service-container section {
+        width: 30%;
+    }
 }
 
 /* ====================================

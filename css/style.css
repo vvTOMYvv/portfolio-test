@@ -20,6 +20,77 @@
 }
 
 /* ====================================
+// SERVICE SECTION
+// ==================================== */
+#sevice {
+    text-align: center;
+    margin-bottom: 60px;
+}
+#sevice section {
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    width: 90%;
+    margin-bottom: 30px;
+    padding: 0 10px;
+}
+#sevice section .ttl {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+#sevice section p.ttl {
+    font-size: 14px;
+    font-weight: normal;
+    color: #a5a5a5;
+    margin-bottom: 10px;
+}
+#sevice section .icon {
+    margin-bottom: 20px;
+}
+#sevice section .icon img {
+    width: 60px;
+    height: auto;
+}
+#sevice section .text01 {
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: left;
+}
+#sevice section.last {
+    margin-bottom: 0;
+}
+/* ----- Tablet ----- */
+@media only screen and (min-width: 760px) {
+    #sevice {
+        margin-bottom: 80px;
+    }
+    #sevice section {
+        width: 32%;
+        margin-right: 2%;
+        margin-bottom: 0;
+    }
+    #sevice section.last {
+        margin-right: 0;
+    }
+}
+/* ----- PC ----- */
+@media only screen and (min-width: 961px) {
+    #sevice {
+        max-width: 960px;
+        margin: 0 auto 100px;
+        text-align: center;
+    }
+    #sevice section {
+        width: 30%;
+        margin-right: 5%;
+    }
+    #sevice section.last {
+        margin-right: 0;
+    }
+}
+
+/* ====================================
 // ABOUT PAGE
 // ==================================== */
 .fBox01 {

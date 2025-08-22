@@ -23,40 +23,40 @@
 // SERVICE SECTION
 // ==================================== */
 /* 親要素にflexboxを適用 */
-#sevice {
+#service {
     text-align: center;
     margin-bottom: 60px;
     padding: 0 5%; /* スマホ表示でも左右に余白を追加 */
 }
-#sevice section {
+#service section {
     width: 100%; /* スマホでは1カラム */
     margin-bottom: 30px;
     box-sizing: border-box;
 }
-#sevice section .ttl {
+#service section .ttl {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 5px;
 }
-#sevice section p.ttl {
+#service section p.ttl {
     font-size: 14px;
     font-weight: normal;
     color: #a5a5a5;
     margin-bottom: 10px;
 }
-#sevice section .icon {
+#service section .icon {
     margin-bottom: 20px;
 }
-#sevice section .icon img {
+#service section .icon img {
     width: 60px;
     height: auto;
 }
-#sevice section .text01 {
+#service section .text01 {
     font-size: 14px;
     line-height: 1.6;
     text-align: left;
 }
-#sevice section.last {
+#service section.last {
     margin-bottom: 0;
 }
 
@@ -186,7 +186,7 @@
     }
     
     /* SERVICE SECTION */
-    #sevice {
+    #service {
         display: flex; /* flexboxを有効化 */
         justify-content: center; /* 中央揃え */
         gap: 2%; /* カラム間の隙間 */
@@ -194,7 +194,7 @@
         margin: 0 auto 80px;
         padding: 0 20px;
     }
-    #sevice section {
+    #service section {
         width: 32%; /* 3カラムにするため幅を調整 */
         margin-bottom: 0;
     }
@@ -256,11 +256,11 @@
 @media only screen and (min-width: 961px) {
     
     /* SERVICE SECTION */
-    #sevice {
+    #service {
         gap: 5%; /* PCでは隙間を広げる */
         margin-bottom: 100px;
     }
-    #sevice section {
+    #service section {
         width: 30%;
     }
     

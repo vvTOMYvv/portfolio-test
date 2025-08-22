@@ -25,19 +25,16 @@
 #service {
     text-align: center;
     margin-bottom: 60px;
-    padding: 0 5%; /* スマホ表示でも左右に余白を追加 */
+    padding: 0 5%;
 }
-#service .ttl { /* 見出しのスタイルはここに */
-    margin-bottom: 30px; /* 見出しとカラムの間の余白 */
+#service .ttl {
+    margin-bottom: 30px;
 }
-
-/* ↓↓↓ スマホでは縦並び（デフォルト） ↓↓↓ */
 .service-container section {
     width: 100%;
     margin-bottom: 30px;
     box-sizing: border-box;
 }
-
 .service-container section .ttl {
     font-size: 24px;
     font-weight: bold;
@@ -65,41 +62,6 @@
     margin-bottom: 0;
 }
 
-
-/* ----- Tablet (760px以上) ----- */
-@media only screen and (min-width: 760px) {
-    #service {
-        max-width: 960px;
-        margin: 0 auto 80px;
-        padding: 0 20px;
-    }
-
-    /* ↓↓↓ 横並びの指定を service-container に適用 ↓↓↓ */
-    .service-container {
-        display: flex;
-        justify-content: center;
-        gap: 2%;
-        text-align: center;
-    }
-    .service-container section {
-        width: 32%;
-        margin-bottom: 0;
-    }
-}
-
-/* ----- PC (961px以上) ----- */
-@media only screen and (min-width: 961px) {
-    #service {
-        margin-bottom: 100px;
-    }
-    .service-container {
-        gap: 5%; /* PCでは隙間を広げる */
-    }
-    .service-container section {
-        width: 30%;
-    }
-}
-
 /* ====================================
 // WORKS SECTION (TOP PAGE)
 // ==================================== */
@@ -107,18 +69,18 @@
     padding: 0 5%;
     margin-bottom: 60px;
 }
-.worksList {
+#works .worksList {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-.worksList li {
+#works .worksList li {
     margin-bottom: 20px;
 }
-.worksList li:last-child {
+#works .worksList li:last-child {
     margin-bottom: 0;
 }
-.worksList .photo img {
+#works .worksList .photo img {
     width: 100%;
     height: auto;
     display: block;
@@ -127,68 +89,66 @@
 /* ====================================
 // ABOUT PAGE
 // ==================================== */
-.fBox01 {
+#about .fBox01 {
     margin-bottom: 20px;
 }
-.fBox01 .fBoxLeft {
+#about .fBox01 .fBoxLeft {
     float: left;
     margin-bottom: 30px;
 }
-.fBox01 .fBoxLeft img {
+#about .fBox01 .fBoxLeft img {
     width: 140px;
     height: auto;
 }
-.fBox01 .fBoxRight {
+#about .fBox01 .fBoxRight {
     padding-left: 20px;
 }
-.fBox01 .fBoxRight h2 {
+#about .fBox01 .fBoxRight h2 {
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 15px;
 }
-.companyProf {
+#about .companyProf {
     margin-bottom: 25px;
 }
-.companyProf dt {
+#about .companyProf dt {
     float: left;
     margin-right: 5px;
     line-height: 1.5;
 }
-.companyProf dd {
+#about .companyProf dd {
     line-height: 1.5;
 }
 
 /* ====================================
 // WORKS PAGE
 // ==================================== */
-/* HTMLのulのid名と合わせる */
-.worksList {
+#works-page .worksList {
     margin: 0;
     padding: 0 20px;
 }
-.worksList li {
+#works-page .worksList li {
     margin-bottom: 40px;
     text-align: center;
 }
-.worksList li:last-child {
+#works-page .worksList li:last-child {
     margin-bottom: 0;
 }
-/* HTMLのpタグのクラス名と合わせる */
-.worksList li .photo img {
+#works-page .worksList li .photo img {
     width: 100%;
     height: auto;
 }
-.worksList li .ttl {
+#works-page .worksList li .ttl {
     font-size: 18px;
     margin-top: 15px;
     margin-bottom: 5px;
 }
-.worksList li .skill {
+#works-page .worksList li .skill {
     font-size: 12px;
     color: #a5a5a5;
     margin-bottom: 10px;
 }
-.worksList li .readLast {
+#works-page .worksList li .readLast {
     font-size: 14px;
     text-align: left;
     line-height: 1.6;
@@ -197,7 +157,7 @@
 /* ====================================
 // HOBBY PAGE
 // ==================================== */
-.txtBox {
+#hobby .txtBox {
     margin-bottom: 40px;
     line-height: 1.8;
 }
@@ -207,8 +167,7 @@
 // ==================================== */
 /* ----- Tablet (760px以上) ----- */
 @media only screen and (min-width: 760px) {
-
-    /* Top Page */
+    /* TOP PAGE */
     #mainVisual {
         margin-bottom: 80px;
         background-color: #ecebeb;
@@ -225,122 +184,130 @@
         display: none;
     }
     
-    /* SERVICE SECTION */
     #service {
-        display: flex; /* flexboxを有効化 */
-        justify-content: center; /* 中央揃え */
-        gap: 2%; /* カラム間の隙間 */
-        max-width: 960px;
-        margin: 0 auto 80px;
-        padding: 0 20px;
+        margin-bottom: 80px;
     }
-    #service section {
-        width: 32%; /* 3カラムにするため幅を調整 */
-        margin-bottom: 0;
-    }
-    
-    /* WORKS SECTION (TOP PAGE) */
-    #works {
-        max-width: 960px;
-        margin: 0 auto 80px;
-        padding: 0 20px;
-    }
-    .worksList {
+    .service-container {
         display: flex;
         justify-content: center;
         gap: 2%;
     }
-    .worksList li {
+    .service-container section {
         width: 32%;
         margin-bottom: 0;
     }
 
-    /* About Page */
-    .fBox01 {
+    #works {
+        max-width: 960px;
+        margin: 0 auto 80px;
+        padding: 0;
+    }
+    #works .worksList {
+        display: flex;
+        justify-content: center;
+        gap: 2%;
+    }
+    #works .worksList li {
+        width: 32%;
+        margin-bottom: 0;
+    }
+    
+    /* ABOUT PAGE */
+    #about .fBox01 {
         margin: 0 40px;
     }
-    .fBox01 .fBoxLeft {
+    #about .fBox01 .fBoxLeft {
         float: none;
         width: 100%;
         text-align: center;
         margin-bottom: 40px;
     }
-    .fBox01 .fBoxLeft img {
+    #about .fBox01 .fBoxLeft img {
         width: 180px;
     }
-    .fBox01 .fBoxRight {
+    #about .fBox01 .fBoxRight {
         padding-left: 0;
     }
     
-    /* Works Page */
-    .worksList {
+    /* WORKS PAGE */
+    #works-page .worksList {
         max-width: 920px;
         margin: 0 auto;
         padding: 0;
-        /* display: flexとgapはTOP PAGEのスタイルを継承 */
-        flex-wrap: wrap; /* 2列で折り返す設定 */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4%;
     }
-    .worksList li {
+    #works-page .worksList li {
         box-sizing: border-box;
-        width: 48%; /* 2列にするための幅調整 */
+        width: 48%;
         margin-bottom: 60px;
-        vertical-align: top;
     }
-    .worksList li .readLast {
+    #works-page .worksList li:nth-child(2n) {
+        margin-right: 0;
+    }
+    #works-page .worksList li .readLast {
         text-align: center;
     }
-
 }
 
 /* ----- PC (961px以上) ----- */
 @media only screen and (min-width: 961px) {
-    
-    /* SERVICE SECTION */
+    /* TOP PAGE */
     #service {
-        gap: 5%; /* PCでは隙間を広げる */
         margin-bottom: 100px;
     }
-    #service section {
+    .service-container {
+        gap: 5%;
+    }
+    .service-container section {
         width: 30%;
     }
     
-    /* WORKS SECTION (TOP PAGE) */
     #works {
         margin-bottom: 100px;
     }
-    .worksList {
+    #works .worksList {
         gap: 5%;
     }
-    .worksList li {
+    #works .worksList li {
         width: 30%;
     }
 
-    /* About Page */
-    .fBox01 {
+    /* ABOUT PAGE */
+    #about .fBox01 {
         max-width: 960px;
         margin: 0 auto;
-        display: flex; /* flexboxで横並びにする */
-        align-items: flex-start; /* 上揃え */
+        display: flex;
+        align-items: flex-start;
     }
-    .fBox01 .fBoxLeft {
+    #about .fBox01 .fBoxLeft {
         width: 250px;
         margin-bottom: 0;
         text-align: left;
-        flex-shrink: 0; /* 縮まないようにする */
+        flex-shrink: 0;
     }
-    .fBox01 .fBoxRight {
-        padding-left: 30px; /* 隙間を調整 */
+    #about .fBox01 .fBoxRight {
+        padding-left: 30px;
     }
 
-    /* Works Page */
-    .worksList {
-        width: 960px;
+    /* WORKS PAGE */
+    #works-page .worksList {
+        max-width: 960px;
         margin: 0 auto;
         padding: 0;
-        gap: 5%; /* PCでは隙間を広げる */
+        gap: 5%;
+        flex-wrap: wrap;
     }
-    .worksList li {
-        width: 30%; /* 3列にするための幅調整 */
+    #works-page .worksList li {
+        width: 30%;
         margin-bottom: 60px;
+    }
+    #works-page .worksList li:nth-child(2n) {
+        margin-right: 5%;
+    }
+    #works-page .worksList li:nth-child(3n) {
+        margin-right: 0;
     }
 }

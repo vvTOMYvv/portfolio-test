@@ -1,6 +1,154 @@
 @charset "utf-8";
 
 /* ====================================
+// common.css から統合された部分
+// ==================================== */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.9;
+    text-align: left;
+    -webkit-text-size-adjust: 100%;
+}
+a {
+    color: #333;
+    text-decoration: none;
+}
+a:hover {
+    color: #333;
+    text-decoration: none;
+}
+.sp {
+    display: block;
+}
+.pc {
+    display: none;
+}
+
+/* header */
+header {
+    margin-bottom: 25px;
+}
+header#inner {
+    margin-bottom: 30px;
+}
+header h1 {
+    margin: 21px 0 25px 0;
+    padding-left: 30px;
+    text-align: left;
+}
+header h1 img {
+    width: 196px;
+    height: 25px;
+}
+nav {
+    margin-bottom: 20px;
+    border-top: 1px solid #d9d9d9;
+}
+nav li {
+    float: left;
+    width: 50%;
+    border-bottom: 1px solid #d9d9d9;
+    text-align: center;
+}
+
+#about nav li.about a,
+#works nav li.works a,
+#hobby nav li.hobby a {
+    opacity: 0.3;
+}
+nav ul li:nth-child(odd) {
+    background: url(/img/line_nav.gif) repeat-y right top;
+    background-size: 1px 10px;
+}
+nav ul li a {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+}
+.socialBtn {
+    text-align: center;
+    margin: 0 auto;
+}
+.socialBtn li {
+    display: inline;
+    margin-right: 12px;
+}
+.socialBtn li.last {
+    margin-right: 0;
+}
+.socialBtn img {
+    width: 28px;
+    height: 28px;
+}
+
+/* contents */
+#main h2.ttl {
+    margin-bottom: 40px;
+    text-align: center;
+    line-height: 1.0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    font-size: 40px;
+    letter-spacing: 0.05em;
+}
+
+#main.inner h2.ttl {
+    margin-bottom: 25px;
+}
+#main h3.ttl {
+    margin-bottom: 12px;
+    text-align: center;
+    line-height: 1.0;
+    font-size: 22px;
+    color: #505050;
+}
+#main p.ttl {
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 1.0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    color: #a5a5a5;
+}
+.contBox {
+    margin: 0 20px;
+}
+.toTop {
+    text-align: center;
+}
+.toTop a {
+    display: block;
+    margin-bottom: 40px;
+    padding: 8px 20px;
+}
+.toTop img {
+    width: 22px;
+    height: 14px;
+}
+
+/* footer */
+nav.footer {
+    margin-bottom: 20px;
+}
+#copyright {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 12px;
+}
+
+/* ====================================
 // TOP PAGE
 // ==================================== */
 #mainVisual {
@@ -19,9 +167,7 @@
     display: block;
 }
 
-/* ====================================
-// SERVICE SECTION
-// ==================================== */
+/* SERVICE SECTION */
 #service {
     text-align: center;
     margin-bottom: 60px;
@@ -62,9 +208,7 @@
     margin-bottom: 0;
 }
 
-/* ====================================
-// WORKS SECTION (TOP PAGE)
-// ==================================== */
+/* WORKS SECTION (TOP PAGE) */
 #works {
     padding: 0 5%;
     margin-bottom: 60px;
@@ -73,9 +217,14 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 #works .worksList li {
+    width: 100%;
     margin-bottom: 20px;
+    position: relative;
 }
 #works .worksList li:last-child {
     margin-bottom: 0;
@@ -85,6 +234,18 @@
     height: auto;
     display: block;
 }
+#works .worksList li .work-title {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 3px 6px;
+    font-size: 12px;
+    line-height: 1;
+    z-index: 10;
+}
+
 
 /* ====================================
 // ABOUT PAGE
@@ -167,6 +328,112 @@
 // ==================================== */
 /* ----- Tablet (760px以上) ----- */
 @media only screen and (min-width: 760px) {
+    /* common.css から統合された部分 */
+    .sp {
+        display: none;
+    }
+    .pc {
+        display: block;
+    }
+    header {
+        position: relative;
+        max-width: 960px;
+        height: 270px;
+        margin: 0 auto;
+    }
+    header#inner {
+        margin-bottom: 30px;
+    }
+    header h1 {
+        position: absolute;
+        top: 107px;
+        left: 50px;
+        margin: 0;
+        padding-left: 0;
+        text-align: center;
+    }
+    header h1 img {
+        width: 275px;
+        height: 35px;
+    }
+    nav {
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+        margin-bottom: 0;
+        border-top: none;
+    }
+    nav li {
+        margin-left: 50px;
+        display: inline;
+        float: none;
+        border-bottom: none;
+        text-align: right;
+    }
+    nav ul li:nth-child(odd) {
+        background: none;
+    }
+    nav ul li a {
+        display: inline;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.1em;
+    }
+    .socialBtn {
+        position: absolute;
+        top: 112px;
+        right: 30px;
+    }
+    .socialBtn li {
+        display: inline;
+        margin-right: 14px;
+    }
+    .socialBtn li.last {
+        margin-right: 0;
+    }
+    .socialBtn img {
+        width: 22px;
+        height: 22px;
+    }
+    #main.inner {
+        max-width: 960px;
+        padding: 0;
+        margin: 0 auto;
+    }
+    #main h2.ttl.large {
+        margin: 0 0 70px 0;
+        font-size: 46px;
+        text-align: left;
+    }
+    .contBox {
+        margin: 0 40px;
+    }
+    footer {
+        max-width: 960px;
+        margin: 0 5%;
+        padding-bottom: 20px;
+    }
+    nav.footer {
+        position: relative;
+        float: left;
+        width: 60%;
+        margin: 60px 0 0 30px;
+    }
+    nav.footer a {
+        font-size: 14px;
+        font-weight: 400;
+    }
+    nav.footer li {
+        margin: 0 40px 0 0;
+    }
+    #copyright {
+        float: right;
+        width: 40%;
+        margin-top: 32px;
+        margin-bottom: 0;
+        text-align: right;
+    }
+
     /* TOP PAGE */
     #mainVisual {
         margin-bottom: 80px;
@@ -183,7 +450,6 @@
     #mainVisual .sp {
         display: none;
     }
-    
     #service {
         margin-bottom: 80px;
     }
@@ -196,7 +462,6 @@
         width: 32%;
         margin-bottom: 0;
     }
-
     #works {
         max-width: 960px;
         margin: 0 auto 80px;
@@ -204,12 +469,13 @@
     }
     #works .worksList {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         gap: 2%;
     }
     #works .worksList li {
         width: 32%;
-        margin-bottom: 0;
+        margin-bottom: 20px;
     }
     
     /* ABOUT PAGE */
@@ -254,6 +520,41 @@
 
 /* ----- PC (961px以上) ----- */
 @media only screen and (min-width: 961px) {
+    /* common.css から統合された部分 */
+    a:hover {
+        text-decoration: underline;
+    }
+    header h1 {
+        position: absolute;
+        top: 105px;
+        left: 0;
+    }
+    nav {
+        position: absolute;
+        bottom: 30px;
+        right: 0;
+    }
+    .socialBtn {
+        position: absolute;
+        top: 112px;
+        right: 10px;
+    }
+    #main.inner {
+        max-width: 960px;
+        padding: 0;
+        margin: 0 auto;
+    }
+    .contBox {
+        margin: 0;
+    }
+    footer {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+    nav.footer {
+        margin-left: 0;
+    }
+
     /* TOP PAGE */
     #service {
         margin-bottom: 100px;
@@ -264,7 +565,6 @@
     .service-container section {
         width: 30%;
     }
-    
     #works {
         margin-bottom: 100px;
     }
@@ -273,8 +573,9 @@
     }
     #works .worksList li {
         width: 30%;
+        margin-bottom: 20px;
     }
-
+    
     /* ABOUT PAGE */
     #about .fBox01 {
         max-width: 960px;

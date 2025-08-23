@@ -608,52 +608,51 @@ nav.footer {
     }
     
     /* ====================================
-    // ABOUT PAGE (REFACTORED)
+    // ABOUT PAGE (REVISED)
     // ==================================== */
 
-    /* プロフィール全体のコンテナ */
-    .profile-container {
-        display: flex; /* Flexboxで2カラムレイアウトを作成 */
-        flex-direction: column; /* スマホでは縦並び */
-        align-items: center; /* スマホでは中央揃え */
+    /* スマホ表示のスタイル（ベース） */
+    #about .profile-container {
+        display: flex;
+        flex-direction: column; /* 縦並び */
+        align-items: center; /* 中央揃え */
+        padding: 0 20px; /* 左右に余白を追加 */
     }
 
-    /* 左カラム：プロフィール写真 */
-    .profile-sidebar {
+    #about .profile-sidebar {
         text-align: center;
         margin-bottom: 40px;
         width: 100%;
     }
 
-    .profile-image {
+    #about .profile-image {
         width: 180px;
         height: 180px;
-        object-fit: cover; /* 画像の比率を保ったままトリミング */
+        object-fit: cover;
         margin-bottom: 20px;
-        /* border-radius: 50%; 円形にしたい場合はこの行を有効化 */
     }
 
-    .profile-name .name-jp {
+    #about .profile-name .name-jp {
         font-size: 18px;
         font-weight: bold;
     }
-    .profile-name .name-en {
+
+    #about .profile-name .name-en {
         font-size: 12px;
         color: #888;
         letter-spacing: 0.5px;
     }
 
-    /* 右カラム：自己紹介と詳細情報 */
-    .profile-main {
+    #about .profile-main {
         width: 100%;
     }
 
-    .profile-main .txtBox {
+    #about .profile-main .txtBox {
         margin-bottom: 40px;
         line-height: 1.8;
     }
 
-    .profile-sub-ttl {
+    #about .profile-sub-ttl {
         font-size: 18px;
         font-weight: bold;
         margin-top: 40px;
@@ -662,52 +661,63 @@ nav.footer {
         border-bottom: 1px solid #eee;
     }
 
-    /* dt, dd のリストスタイル */
-    .profile-list {
-        display: flex; /* dtとddを横並びにする */
-        flex-wrap: wrap; /* 画面幅に応じて折り返す */
+    #about .profile-list {
+        display: flex;
+        flex-wrap: wrap;
         line-height: 1.8;
         margin-bottom: 10px;
     }
 
-    .profile-list dt {
-        width: 80px; /* dtの幅を固定 */
-        padding-right: 20px;
-        flex-shrink: 0; /* 幅が縮まないようにする */
+    #about .profile-list dt {
+        width: 80px;
+        padding-right: 15px;
+        flex-shrink: 0;
         font-weight: bold;
         color: #555;
     }
 
-    .profile-list dd {
-        width: calc(100% - 100px); /* ddは残りの幅をすべて使う */
+    #about .profile-list dd {
+        width: calc(100% - 95px); /* dtの幅とpaddingを引いた残り */
         margin-left: 0;
     }
 
-    .profile-list.detail dt {
-        width: 160px; /* 詳細リストはdtの幅を広げる */
-    }
-    .profile-list.detail dd {
-        width: calc(100% - 180px);
+    #about .profile-list.detail dt {
+        width: 150px;
     }
 
+    #about .profile-list.detail dd {
+        width: calc(100% - 165px);
+    }
 
-    /* ----- PC (961px以上) ----- */
-    @media only screen and (min-width: 961px) {
-        .profile-container {
-            flex-direction: row; /* PCでは横並び */
-            align-items: flex-start; /* 上揃えにする */
-            justify-content: space-between;
+    /* ==========================================================
+    タブレットとPC表示のスタイル（画面幅768px以上で適用）
+    ========================================================== */
+    @media only screen and (min-width: 768px) {
+
+        /* ★★★ 問題1の修正：メインコンテンツ全体を中央揃え ★★★ */
+        #main.inner {
+            max-width: 960px; /* コンテンツの最大幅を指定 */
+            margin: 0 auto; /* 上下のマージンは0、左右のマージンは自動（→中央揃え） */
+            padding: 0 20px; /* コンテンツの左右に少し余白を持たせる */
         }
         
-        .profile-sidebar {
-            width: 250px; /* 左カラムの幅を固定 */
+        /* ★★★ 問題2の修正：2カラムレイアウトを適用 ★★★ */
+        #about .profile-container {
+            flex-direction: row; /* 横並び */
+            align-items: flex-start; /* 上揃え */
+            justify-content: space-between;
+            padding: 0;
+        }
+
+        #about .profile-sidebar {
+            width: 250px;
             flex-shrink: 0;
             margin-bottom: 0;
             text-align: left;
         }
 
-        .profile-main {
-            width: calc(100% - 300px); /* 右カラムは残りの幅を使う */
+        #about .profile-main {
+            width: calc(100% - 300px); /* 左カラムとの間に余白を持たせる */
         }
     }
 }

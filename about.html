@@ -1,17 +1,3 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="format-detection" content="telephone=no">
-    <title>About | Ryo's Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link href='https://fonts.googleapis.com/css?family=Lato:100,700,400' rel='stylesheet' type='text/css'>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="js/common.js"></script>
-</head>
 <body id="about">
     <header>
         <h1 id="logo">
@@ -20,61 +6,88 @@
             </a>
         </h1>
         <nav>
-            <ul class="cf">
+            <ul>
                 <li class="about"><a href="about.html">About</a></li>
                 <li class="works"><a href="works.html">Works</a></li>
                 <li class="hobby"><a href="hobby.html">Hobby</a></li>
             </ul>
         </nav>
     </header>
-    
-    <div id="main" class="inner">
-        
-        <section class="contBox cf">
-            <h2 class="ttl large">About</h2>
-            <p class="txtBox">
-                データサイエンティストとして、企業のデータ活用を推進しています。<br>主にGA4/GTM、Looker Studio、BigQueryの導入支援に携わっています。
-            </p>
-            <div class="fBox01 cf">
-                <p class="imgFace fBoxLeft">
-                    <img src="images/about/img_about.jpg" alt="プロフィール写真">
-                </p>
-                <div class="fBoxRight">
-                    <dl class="companyProf cf">
-                        <dt>氏名 ：</dt><dd>富浦 凌</dd>
-                        <dt>生年月日 ：</dt><dd>1999年1月27日</dd>
-                        <dt>所在地 ：</dt><dd>神奈川県横浜市</dd>
-                        <dt>主な業務内容 ：</dt><dd>データ分析・解析、データ計測/BIツール導入</dd>
-                    </dl>
-                    <h2>主な仕事内容</h2>
-                    <dl class="companyProf cf">
-                        <dt>System Support：</dt><dd>GA4/GTM、BigQuery、BIツール等データ計測および分析基盤の構築</dd>
-                        <dt>Direction：</dt><dd>データ基盤構築およびWeb制作における全般のプロジェクトマネジメント</dd>
-                        <dt>Data&Design Analysis：</dt><dd>定性・定量調査、カスタマージャーニー/ユーザーインサイト分析</dd>
-                        <dt>AI Enginner:</dt><dd>Pythonを利用したAPI構築、データの前処理からモデルの評価、デプロイまでのサポート</dd>
-                    </dl>
-                    <h2>保有資格</h2>
-                    <dl class="companyProf cf">
-                        <dt>2017年3月：</dt><dd>普通自動車第一種運転免許</dd>
-                        <dt>2022年12月：</dt><dd>文部科学省後援 色彩検定3級</dd>
-                        <dt>2023年5月：</dt><dd>ITパスポート</dd>
-                        <dt>2023年12月:</dt><dd>Google アナリティクス個人認定資格</dd>
-                        <dt>2023年12月:</dt><dd>Google Analytics Certification</dd>
-                        <dt>2024年4月:</dt><dd>基本情報技術者試験</dd>
-                        <dt>2024年10月:</dt><dd>Cloud Digital Leader</dd>
-                        <dt>2025年6月:</dt><dd>統計検定2級</dd>
-                        <dt>2025年7月:</dt><dd>プライバシー（代理店とパートナー向け）認定資格</dd>
+
+    <div id="main" class="contBox">
+        <h2 class="ttl large">About</h2>
+
+        <div class="profile-container">
+
+            <aside class="profile-sidebar">
+                <img src="images/about/img_about.jpg" alt="プロフィール写真" class="profile-image">
+                <div class="profile-name">
+                    <p class="name-jp">富浦 凌</p>
+                    <p class="name-en">Ryo Tomiura</p>
                 </div>
-            </div>
-        </section>
-        
-        <p class="toTop"><a href="#top"><img src="images/icon_to_top.gif" alt="トップへ戻る"></a></p>
-        
-    </div>
+            </aside>
+
+            <main class="profile-main">
+                <p class="txtBox">
+                    データサイエンティストとして、企業のデータ活用を推進しています。<br>
+                    主にGA4/GTM、Looker Studio、BigQueryの導入支援に携わっています。
+                </p>
+
+                <dl class="profile-list">
+                    <dt>氏名</dt>
+                    <dd>富浦 凌（Tomiura Ryo）</dd>
+
+                    <dt>生年月日</dt>
+                    <dd>1999年1月27日</dd>
+
+                    <dt>所在地</dt>
+                    <dd>神奈川県横浜市</dd>
+
+                    <dt>業務内容</dt>
+                    <dd>データ分析・解析、データ計測/BIツール導入支援</dd>
+                </dl>
+
+                <h3 class="profile-sub-ttl">主な仕事内容</h3>
+                <dl class="profile-list detail">
+                    <dt>System Support</dt>
+                    <dd>GA4/GTM、BigQuery、BIツール等データ計測および分析基盤の構築</dd>
+                    
+                    <dt>Direction</dt>
+                    <dd>データ基盤構築およびWeb制作における全般のプロジェクトマネジメント</dd>
+                    
+                    <dt>Data&Design Analysis</dt>
+                    <dd>定性・定量調査、カスタマージャーニー/ユーザーインサイト分析</dd>
+                    
+                    <dt>AI Enginner</dt>
+                    <dd>Pythonを利用したAPI構築、データの前処理からモデルの評価、デプロイまでのサポート</dd>
+                </dl>
+
+                <h3 class="profile-sub-ttl">保有資格</h3>
+                <dl class="profile-list detail">
+                    <dt>2025年</dt>
+                    <dd>統計検定2級、プライバシー認定資格</dd>
+
+                    <dt>2024年</dt>
+                    <dd>基本情報技術者試験、Cloud Digital Leader</dd>
+
+                    <dt>2023年</dt>
+                    <dd>ITパスポート、Google アナリティクス個人認定資格</dd>
+
+                    <dt>2022年</dt>
+                    <dd>文部科学省後援 色彩検定3級</dd>
+
+                    <dt>2017年</dt>
+                    <dd>普通自動車第一種運転免許</dd>
+                </dl>
+            </main>
+        </div>
+        </div>
     
-    <footer class="cf">
+    <p class="toTop"><a href="#top"><img src="images/icon_to_top.gif" alt="トップへ戻る"></a></p>
+
+    <footer>
         <nav class="footer">
-            <ul class="cf">
+            <ul>
                 <li class="about"><a href="about.html">About</a></li>
                 <li class="works"><a href="works.html">Works</a></li>
                 <li class="hobby"><a href="hobby.html">Hobby</a></li>
@@ -83,4 +96,3 @@
         <p id="copyright"><small>&#169; © Made by Ryo Tomiura.</small></p>
     </footer>
 </body>
-</html>

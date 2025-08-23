@@ -1,8 +1,5 @@
 @charset "utf-8";
 
-/* ====================================
-// common.css から統合された部分
-// ==================================== */
 html {
     scroll-behavior: smooth;
 }
@@ -288,37 +285,93 @@ nav.footer {
 /* ====================================
 // ABOUT PAGE
 // ==================================== */
+#about .contBox {
+    padding: 0 5%;
+}
 #about .fBox01 {
     margin-bottom: 20px;
+    display: flex; /* Flexboxを有効化 */
+    flex-direction: column; /* スマホでは縦に並べる */
+    align-items: center; /* 中央寄せ */
 }
-#about .fBox01 .fBoxLeft {
-    float: left;
+#about .fBox01 .imgFace {
     margin-bottom: 30px;
 }
-#about .fBox01 .fBoxLeft img {
+#about .fBox01 .imgFace img {
     width: 140px;
     height: auto;
+    border-radius: 50%; /* プロフィール画像を丸くする */
+    border: 3px solid #eee; /* 枠線を追加してスタイリッシュに */
 }
 #about .fBox01 .fBoxRight {
-    padding-left: 20px;
+    width: 100%; /* スマホでは幅いっぱいに */
 }
 #about .fBox01 .fBoxRight h2 {
     font-size: 16px;
     font-weight: bold;
+    margin-top: 30px; /* セクション間の余白 */
     margin-bottom: 15px;
+    text-align: left; /* 左寄せに */
+}
+#about .fBox01 .fBoxRight h2:first-of-type {
+    margin-top: 0;
 }
 #about .companyProf {
     margin-bottom: 25px;
 }
-#about .companyProf dt {
-    float: left;
-    margin-right: 5px;
+#about .companyProf dt,
+#about .companyProf dd {
+    margin-bottom: 5px; /* 各項目間の余白 */
     line-height: 1.5;
+}
+#about .companyProf dt {
+    font-weight: bold;
 }
 #about .companyProf dd {
-    line-height: 1.5;
+    margin-left: 0; /* dtとddの余白を調整 */
 }
 
+/* Flexboxを使ったDT/DDのレイアウト */
+#about .companyProf {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+#about .companyProf dt {
+    width: 100px; /* dtの幅を固定 */
+    flex-shrink: 0;
+}
+#about .companyProf dd {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+/* ====================================
+// Media Queries
+// ==================================== */
+/* ----- Tablet (760px以上) ----- */
+@media only screen and (min-width: 760px) {
+    #about .contBox {
+        margin: 0 40px;
+    }
+    #about .fBox01 {
+        max-width: 960px;
+        margin: 0 auto;
+        flex-direction: row; /* PCでは横に並べる */
+        align-items: flex-start;
+        gap: 40px;
+    }
+    #about .fBox01 .imgFace {
+        flex-shrink: 0;
+        margin-bottom: 0;
+    }
+    #about .fBox01 .fBoxRight {
+        flex-grow: 1;
+    }
+    #about .fBox01 .imgFace img {
+        width: 180px;
+    }
+}
 /* ====================================
 // WORKS PAGE
 // ==================================== */

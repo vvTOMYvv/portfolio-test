@@ -298,23 +298,21 @@ nav.footer {
 }
 #about .companyProf {
     margin-bottom: 25px;
+    /* Flexboxを使いdtとddを横並びにする */
     display: flex;
     flex-wrap: wrap;
-    align-items: baseline;
 }
-#about .companyProf dt,
-#about .companyProf dd {
+#about .companyProf dt {
+    font-weight: bold;
+    width: 150px; /* 画像のようなレイアウトにするため、dtの幅を固定 */
+    flex-shrink: 0;
     margin-bottom: 5px;
     line-height: 1.5;
 }
-#about .companyProf dt {
-    width: 100px; /* dtの幅を固定 */
-    flex-shrink: 0;
-    font-weight: bold;
-}
 #about .companyProf dd {
-    flex-grow: 1;
-    margin-left: 10px;
+    margin-left: 0;
+    margin-bottom: 5px;
+    line-height: 1.5;
 }
 
 /* ====================================

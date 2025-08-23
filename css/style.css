@@ -607,39 +607,107 @@ nav.footer {
         margin-bottom: 20px;
     }
     
-    /* ABOUT PAGE */
-    #about .fBox01 {
-        max-width: 960px;
-        margin: 0 auto;
-        display: flex;
-        align-items: flex-start;
-    }
-    #about .fBox01 .imgFace {
-        width: 250px;
-        margin-bottom: 0;
-        text-align: left;
-        flex-shrink: 0;
-    }
-    #about .fBox01 .fBoxRight {
-        padding-left: 30px;
+    /* ====================================
+    // ABOUT PAGE (REFACTORED)
+    // ==================================== */
+
+    /* プロフィール全体のコンテナ */
+    .profile-container {
+        display: flex; /* Flexboxで2カラムレイアウトを作成 */
+        flex-direction: column; /* スマホでは縦並び */
+        align-items: center; /* スマホでは中央揃え */
     }
 
-    /* WORKS PAGE */
-    #works-page .worksList {
-        max-width: 960px;
-        margin: 0 auto;
-        padding: 0;
-        gap: 5%;
-        flex-wrap: wrap;
+    /* 左カラム：プロフィール写真 */
+    .profile-sidebar {
+        text-align: center;
+        margin-bottom: 40px;
+        width: 100%;
     }
-    #works-page .worksList li {
-        width: 30%;
-        margin-bottom: 60px;
+
+    .profile-image {
+        width: 180px;
+        height: 180px;
+        object-fit: cover; /* 画像の比率を保ったままトリミング */
+        margin-bottom: 20px;
+        /* border-radius: 50%; 円形にしたい場合はこの行を有効化 */
     }
-    #works-page .worksList li:nth-child(2n) {
-        margin-right: 5%;
+
+    .profile-name .name-jp {
+        font-size: 18px;
+        font-weight: bold;
     }
-    #works-page .worksList li:nth-child(3n) {
-        margin-right: 0;
+    .profile-name .name-en {
+        font-size: 12px;
+        color: #888;
+        letter-spacing: 0.5px;
+    }
+
+    /* 右カラム：自己紹介と詳細情報 */
+    .profile-main {
+        width: 100%;
+    }
+
+    .profile-main .txtBox {
+        margin-bottom: 40px;
+        line-height: 1.8;
+    }
+
+    .profile-sub-ttl {
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #eee;
+    }
+
+    /* dt, dd のリストスタイル */
+    .profile-list {
+        display: flex; /* dtとddを横並びにする */
+        flex-wrap: wrap; /* 画面幅に応じて折り返す */
+        line-height: 1.8;
+        margin-bottom: 10px;
+    }
+
+    .profile-list dt {
+        width: 80px; /* dtの幅を固定 */
+        padding-right: 20px;
+        flex-shrink: 0; /* 幅が縮まないようにする */
+        font-weight: bold;
+        color: #555;
+    }
+
+    .profile-list dd {
+        width: calc(100% - 100px); /* ddは残りの幅をすべて使う */
+        margin-left: 0;
+    }
+
+    .profile-list.detail dt {
+        width: 160px; /* 詳細リストはdtの幅を広げる */
+    }
+    .profile-list.detail dd {
+        width: calc(100% - 180px);
+    }
+
+
+    /* ----- PC (961px以上) ----- */
+    @media only screen and (min-width: 961px) {
+        .profile-container {
+            flex-direction: row; /* PCでは横並び */
+            align-items: flex-start; /* 上揃えにする */
+            justify-content: space-between;
+        }
+        
+        .profile-sidebar {
+            width: 250px; /* 左カラムの幅を固定 */
+            flex-shrink: 0;
+            margin-bottom: 0;
+            text-align: left;
+        }
+
+        .profile-main {
+            width: calc(100% - 300px); /* 右カラムは残りの幅を使う */
+        }
     }
 }

@@ -208,7 +208,9 @@ nav.footer {
     margin-bottom: 0;
 }
 
-/* WORKS SECTION (TOP PAGE) */
+/* ====================================
+// WORKS SECTION (TOP PAGE)
+// ==================================== */
 #works {
     padding: 0 5%;
     margin-bottom: 60px;
@@ -222,9 +224,8 @@ nav.footer {
     justify-content: space-between;
 }
 #works .worksList li {
-    width: 100%;
+    width: 100%; /* スマホでは1カラム */
     margin-bottom: 20px;
-    position: relative;
 }
 #works .worksList li:last-child {
     margin-bottom: 0;
@@ -234,16 +235,34 @@ nav.footer {
     height: auto;
     display: block;
 }
+/* 画像タイトルのスタイル */
 #works .worksList li .work-title {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 3px 6px;
-    font-size: 12px;
-    line-height: 1;
-    z-index: 10;
+    font-weight: bold;
+    margin-bottom: 5px; /* タイトルと画像の間に余白 */
+}
+
+
+/* メディアクエリの修正 */
+@media only screen and (min-width: 760px) {
+    /* ... 他のスタイルは省略 ... */
+    #works .worksList {
+        justify-content: center;
+        gap: 2%;
+    }
+    #works .worksList li {
+        width: 32%; /* 3カラムにするため幅を調整 */
+        margin-bottom: 20px;
+    }
+}
+@media only screen and (min-width: 961px) {
+    /* ... 他のスタイルは省略 ... */
+    #works .worksList {
+        gap: 5%;
+    }
+    #works .worksList li {
+        width: 30%;
+        margin-bottom: 20px;
+    }
 }
 
 

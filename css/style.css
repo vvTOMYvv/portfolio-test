@@ -316,37 +316,95 @@ nav.footer {
 }
 
 /* ====================================
-// WORKS PAGE
+// WORKS PAGE (REVISED)
 // ==================================== */
-#works-page .worksList {
+#works-page .contBox {
+    padding: 0 5%;
+}
+
+#works-page #worksList {
+    display: flex; /* Flexboxを有効化 */
+    flex-wrap: wrap; /* 要素を折り返す */
+    justify-content: space-between; /* 要素間のスペースを均等にする */
+    gap: 40px 20px; /* 行と列の間に余白を追加 */
+    list-style: none;
+    padding: 0;
     margin: 0;
-    padding: 0 20px;
 }
-#works-page .worksList li {
-    margin-bottom: 40px;
-    text-align: center;
+
+#works-page #worksList li {
+    width: 100%; /* スマホでは1カラム */
+    box-sizing: border-box;
+    text-align: left;
+    margin-bottom: 20px; /* スマホ時の項目間余白 */
 }
-#works-page .worksList li:last-child {
-    margin-bottom: 0;
-}
-#works-page .worksList li .photo img {
+
+#works-page #worksList li .img img {
     width: 100%;
     height: auto;
-}
-#works-page .worksList li .ttl {
-    font-size: 18px;
-    margin-top: 15px;
-    margin-bottom: 5px;
-}
-#works-page .worksList li .skill {
-    font-size: 12px;
-    color: #a5a5a5;
+    display: block;
     margin-bottom: 10px;
 }
-#works-page .worksList li .readLast {
+
+#works-page #worksList li .ttl {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 5px;
+    line-height: 1.2;
+}
+
+#works-page #worksList li .skill {
     font-size: 14px;
-    text-align: left;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+#works-page #worksList li .readLast {
+    font-size: 14px;
     line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* 最後の要素は余白をなくす（スマホ対応） */
+#works-page #worksList li:last-child {
+    margin-bottom: 0;
+}
+
+/* ====================================
+// Media Queries
+// ==================================== */
+/* ----- Tablet (760px以上) ----- */
+@media only screen and (min-width: 760px) {
+    /* 他のスタイルは省略... */
+
+    /* WORKS PAGE */
+    #works-page #worksList {
+        justify-content: space-between;
+        gap: 60px 4%; /* タブレット以上のギャップ */
+        margin-bottom: 60px; /* リスト下部の余白 */
+    }
+
+    #works-page #worksList li {
+        width: 48%; /* タブレットでは2カラム */
+        margin-bottom: 0; /* Flexboxのgapを使うため個別マージンは0に */
+    }
+
+    /* PC (961px以上) */
+    @media only screen and (min-width: 961px) {
+        /* 他のスタイルは省略... */
+
+        /* WORKS PAGE */
+        #works-page #worksList {
+            justify-content: space-between;
+            gap: 80px 5%; /* PCでのギャップをさらに大きく */
+        }
+    
+        #works-page #worksList li {
+            width: 30%; /* PCでは3カラム */
+            margin-bottom: 0;
+        }
+    }
 }
 
 /* ====================================

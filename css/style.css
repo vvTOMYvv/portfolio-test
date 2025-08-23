@@ -1,5 +1,8 @@
 @charset "utf-8";
 
+/* ====================================
+// common.css から統合された部分
+// ==================================== */
 html {
     scroll-behavior: smooth;
 }
@@ -219,13 +222,13 @@ nav.footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    text-align: left; /* テキストを左寄せに */
+    text-align: left;
 }
 #works .worksList li {
-    width: 100%; /* スマホでは1カラム */
+    width: 100%;
     margin-bottom: 20px;
     position: relative;
-    box-sizing: border-box; /* paddingやborderを含めて幅を計算 */
+    box-sizing: border-box;
 }
 #works .worksList li:last-child {
     margin-bottom: 0;
@@ -251,35 +254,12 @@ nav.footer {
     display: inline-block;
     font-size: 14px;
     font-weight: bold;
-    color: #007bff; /* リンクの色を設定 */
+    color: #007bff;
     text-decoration: none;
     line-height: 1;
 }
 #works .worksList li .detail:hover {
     text-decoration: underline;
-}
-
-/* メディアクエリの修正 */
-@media only screen and (min-width: 760px) {
-    /* ... 他のスタイルは省略 ... */
-    #works .worksList {
-        justify-content: center;
-        gap: 2%;
-    }
-    #works .worksList li {
-        width: 32%; /* 3カラムにするため幅を調整 */
-        margin-bottom: 20px;
-    }
-}
-@media only screen and (min-width: 961px) {
-    /* ... 他のスタイルは省略 ... */
-    #works .worksList {
-        gap: 5%;
-    }
-    #works .worksList li {
-        width: 30%;
-        margin-bottom: 20px;
-    }
 }
 
 /* ====================================
@@ -290,9 +270,9 @@ nav.footer {
 }
 #about .fBox01 {
     margin-bottom: 20px;
-    display: flex; /* Flexboxを有効化 */
-    flex-direction: column; /* スマホでは縦に並べる */
-    align-items: center; /* 中央寄せ */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #about .fBox01 .imgFace {
     margin-bottom: 30px;
@@ -300,78 +280,43 @@ nav.footer {
 #about .fBox01 .imgFace img {
     width: 140px;
     height: auto;
-    border-radius: 50%; /* プロフィール画像を丸くする */
-    border: 3px solid #eee; /* 枠線を追加してスタイリッシュに */
+    border-radius: 50%;
+    border: 3px solid #eee;
 }
 #about .fBox01 .fBoxRight {
-    width: 100%; /* スマホでは幅いっぱいに */
+    width: 100%;
 }
 #about .fBox01 .fBoxRight h2 {
     font-size: 16px;
     font-weight: bold;
-    margin-top: 30px; /* セクション間の余白 */
+    margin-top: 30px;
     margin-bottom: 15px;
-    text-align: left; /* 左寄せに */
+    text-align: left;
 }
 #about .fBox01 .fBoxRight h2:first-of-type {
     margin-top: 0;
 }
 #about .companyProf {
     margin-bottom: 25px;
-}
-#about .companyProf dt,
-#about .companyProf dd {
-    margin-bottom: 5px; /* 各項目間の余白 */
-    line-height: 1.5;
-}
-#about .companyProf dt {
-    font-weight: bold;
-}
-#about .companyProf dd {
-    margin-left: 0; /* dtとddの余白を調整 */
-}
-
-/* Flexboxを使ったDT/DDのレイアウト */
-#about .companyProf {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
 }
+#about .companyProf dt,
+#about .companyProf dd {
+    margin-bottom: 5px;
+    line-height: 1.5;
+}
 #about .companyProf dt {
     width: 100px; /* dtの幅を固定 */
     flex-shrink: 0;
+    font-weight: bold;
 }
 #about .companyProf dd {
     flex-grow: 1;
     margin-left: 10px;
 }
 
-/* ====================================
-// Media Queries
-// ==================================== */
-/* ----- Tablet (760px以上) ----- */
-@media only screen and (min-width: 760px) {
-    #about .contBox {
-        margin: 0 40px;
-    }
-    #about .fBox01 {
-        max-width: 960px;
-        margin: 0 auto;
-        flex-direction: row; /* PCでは横に並べる */
-        align-items: flex-start;
-        gap: 40px;
-    }
-    #about .fBox01 .imgFace {
-        flex-shrink: 0;
-        margin-bottom: 0;
-    }
-    #about .fBox01 .fBoxRight {
-        flex-grow: 1;
-    }
-    #about .fBox01 .imgFace img {
-        width: 180px;
-    }
-}
 /* ====================================
 // WORKS PAGE
 // ==================================== */
@@ -573,14 +518,11 @@ nav.footer {
     #about .fBox01 {
         margin: 0 40px;
     }
-    #about .fBox01 .fBoxLeft {
+    #about .fBox01 .imgFace {
         float: none;
         width: 100%;
         text-align: center;
         margin-bottom: 40px;
-    }
-    #about .fBox01 .fBoxLeft img {
-        width: 180px;
     }
     #about .fBox01 .fBoxRight {
         padding-left: 0;
@@ -674,7 +616,7 @@ nav.footer {
         display: flex;
         align-items: flex-start;
     }
-    #about .fBox01 .fBoxLeft {
+    #about .fBox01 .imgFace {
         width: 250px;
         margin-bottom: 0;
         text-align: left;

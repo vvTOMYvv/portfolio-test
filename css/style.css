@@ -222,10 +222,13 @@ nav.footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    text-align: left; /* テキストを左寄せに */
 }
 #works .worksList li {
     width: 100%; /* スマホでは1カラム */
     margin-bottom: 20px;
+    position: relative;
+    box-sizing: border-box; /* paddingやborderを含めて幅を計算 */
 }
 #works .worksList li:last-child {
     margin-bottom: 0;
@@ -235,12 +238,29 @@ nav.footer {
     height: auto;
     display: block;
 }
-/* 画像タイトルのスタイル */
 #works .worksList li .work-title {
+    font-size: 16px;
     font-weight: bold;
-    margin-bottom: 5px; /* タイトルと画像の間に余白 */
+    margin-top: 10px;
+    margin-bottom: 5px;
+    line-height: 1.2;
 }
-
+#works .worksList li .cont {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+#works .worksList li .detail {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #007bff; /* リンクの色を設定 */
+    text-decoration: none;
+    line-height: 1;
+}
+#works .worksList li .detail:hover {
+    text-decoration: underline;
+}
 
 /* メディアクエリの修正 */
 @media only screen and (min-width: 760px) {
@@ -264,7 +284,6 @@ nav.footer {
         margin-bottom: 20px;
     }
 }
-
 
 /* ====================================
 // ABOUT PAGE

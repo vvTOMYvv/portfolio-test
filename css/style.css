@@ -20,7 +20,8 @@ a {
     text-decoration: none;
 }
 a:hover {
-    text-decoration: underline; /* ホバー時に下線を表示 */
+    color: #333;
+    text-decoration: none;
 }
 .sp {
     display: block;
@@ -31,10 +32,10 @@ a:hover {
 
 /* header */
 header {
-    margin-bottom: 0; /* ヘッダー下部の余白を削除 */
+    margin-bottom: 25px;
 }
 header#inner {
-    margin-bottom: 0; /* ヘッダー下部の余白を削除 */
+    margin-bottom: 30px;
 }
 header h1 {
     margin: 21px 0 25px 0;
@@ -90,10 +91,6 @@ nav ul li a {
 }
 
 /* contents */
-#main {
-    margin-top: 60px; /* #main全体に上部の余白を追加 */
-}
-
 #main h2.ttl {
     margin-bottom: 40px;
     text-align: center;
@@ -125,8 +122,7 @@ nav ul li a {
     color: #a5a5a5;
 }
 .contBox {
-    margin: 0; /* マージンをリセット */
-    padding: 0 19.5px; /* 全ページで共通のパディングを設定 */
+    margin: 0 20px;
 }
 .toTop {
     text-align: center;
@@ -174,7 +170,7 @@ nav.footer {
 #service {
     text-align: center;
     margin-bottom: 60px;
-    padding: 0 5%; /* PC/タブレット用はメディアクエリで上書き */
+    padding: 0 5%;
 }
 #service .ttl {
     margin-bottom: 30px;
@@ -213,7 +209,7 @@ nav.footer {
 
 /* WORKS SECTION (TOP PAGE) */
 #works {
-    padding: 0 5%; /* PC/タブレット用はメディアクエリで上書き */
+    padding: 0 5%;
     margin-bottom: 60px;
 }
 #works .worksList {
@@ -266,6 +262,9 @@ nav.footer {
 /* ====================================
 // ABOUT PAGE
 // ==================================== */
+#about .contBox {
+    padding: 0 5%;
+}
 
 /* h2タイトルの調整 */
 #about .ttl.large {
@@ -351,6 +350,9 @@ nav.footer {
 /* ====================================
 // WORKS PAGE
 // ==================================== */
+#works-page .contBox {
+    padding: 0 5%;
+}
 
 #works-page #works-list {
     list-style: none;
@@ -414,10 +416,13 @@ nav.footer {
         display: block;
     }
     header {
-        margin-bottom: 0; /* SP版のスタイルと統一 */
+        position: relative;
+        max-width: 960px;
+        height: 270px;
+        margin: 0 auto;
     }
     header#inner {
-        margin-bottom: 0; /* SP版のスタイルと統一 */
+        margin-bottom: 30px;
     }
     header h1 {
         position: absolute;
@@ -472,7 +477,7 @@ nav.footer {
     }
     #main.inner {
         max-width: 960px;
-        padding: 0 40px; /* PC/タブレット用のパディングを再設定 */
+        padding: 0;
         margin: 0 auto;
     }
     #main h2.ttl.large {
@@ -481,8 +486,7 @@ nav.footer {
         text-align: left;
     }
     .contBox {
-        margin: 0;
-        padding: 0; /* PC/タブレット版では個別のパディングをリセット */
+        margin: 0 40px;
     }
     footer {
         max-width: 960px;
@@ -528,7 +532,6 @@ nav.footer {
     }
     #service {
         margin-bottom: 80px;
-        padding: 0; /* SP版のパディングをリセット */
     }
     .service-container {
         display: flex;
@@ -542,7 +545,7 @@ nav.footer {
     #works {
         max-width: 960px;
         margin: 0 auto 80px;
-        padding: 0; /* SP版のパディングをリセット */
+        padding: 0;
     }
     #works .worksList {
         display: flex;
@@ -656,7 +659,7 @@ nav.footer {
         display: flex;
         flex-direction: column; /* 縦並び */
         align-items: center; /* 中央揃え */
-        padding: 0; /* 共通の.contBoxで設定するため削除 */
+        padding: 0 20px; /* 左右に余白を追加 */
     }
 
     #about .profile-sidebar {

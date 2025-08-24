@@ -58,8 +58,7 @@ nav li {
 }
 
 #about nav li.about a,
-#works nav li.works a,
-#hobby nav li.hobby a {
+#works nav li.works a {
     opacity: 0.3;
 }
 nav ul li:nth-child(odd) {

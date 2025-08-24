@@ -20,8 +20,7 @@ a {
     text-decoration: none;
 }
 a:hover {
-    color: #333;
-    text-decoration: none;
+    text-decoration: underline; /* ホバー時に下線を表示 */
 }
 .sp {
     display: block;
@@ -32,10 +31,10 @@ a:hover {
 
 /* header */
 header {
-    margin-bottom: 25px;
+    margin-bottom: 0; /* ヘッダー下部の余白を削除 */
 }
 header#inner {
-    margin-bottom: 30px;
+    margin-bottom: 0; /* ヘッダー下部の余白を削除 */
 }
 header h1 {
     margin: 21px 0 25px 0;
@@ -91,6 +90,10 @@ nav ul li a {
 }
 
 /* contents */
+#main {
+    margin-top: 60px; /* #main全体に上部の余白を追加 */
+}
+
 #main h2.ttl {
     margin-bottom: 40px;
     text-align: center;
@@ -122,8 +125,8 @@ nav ul li a {
     color: #a5a5a5;
 }
 .contBox {
-    margin: 0;
-    padding: 0 19.5px;
+    margin: 0; /* マージンをリセット */
+    padding: 0 19.5px; /* 全ページで共通のパディングを設定 */
 }
 .toTop {
     text-align: center;
@@ -171,7 +174,7 @@ nav.footer {
 #service {
     text-align: center;
     margin-bottom: 60px;
-    padding: 0 5%;
+    padding: 0 5%; /* PC/タブレット用はメディアクエリで上書き */
 }
 #service .ttl {
     margin-bottom: 30px;
@@ -210,7 +213,7 @@ nav.footer {
 
 /* WORKS SECTION (TOP PAGE) */
 #works {
-    padding: 0 5%;
+    padding: 0 5%; /* PC/タブレット用はメディアクエリで上書き */
     margin-bottom: 60px;
 }
 #works .worksList {
@@ -411,10 +414,10 @@ nav.footer {
         display: block;
     }
     header {
-    margin-bottom: 25px;
+        margin-bottom: 0; /* SP版のスタイルと統一 */
     }
     header#inner {
-        margin-bottom: 30px;
+        margin-bottom: 0; /* SP版のスタイルと統一 */
     }
     header h1 {
         position: absolute;
@@ -469,7 +472,7 @@ nav.footer {
     }
     #main.inner {
         max-width: 960px;
-        padding: 0;
+        padding: 0 40px; /* PC/タブレット用のパディングを再設定 */
         margin: 0 auto;
     }
     #main h2.ttl.large {
@@ -478,7 +481,8 @@ nav.footer {
         text-align: left;
     }
     .contBox {
-        margin: 0 40px;
+        margin: 0;
+        padding: 0; /* PC/タブレット版では個別のパディングをリセット */
     }
     footer {
         max-width: 960px;
@@ -524,6 +528,7 @@ nav.footer {
     }
     #service {
         margin-bottom: 80px;
+        padding: 0; /* SP版のパディングをリセット */
     }
     .service-container {
         display: flex;
@@ -537,7 +542,7 @@ nav.footer {
     #works {
         max-width: 960px;
         margin: 0 auto 80px;
-        padding: 0;
+        padding: 0; /* SP版のパディングをリセット */
     }
     #works .worksList {
         display: flex;
@@ -651,7 +656,7 @@ nav.footer {
         display: flex;
         flex-direction: column; /* 縦並び */
         align-items: center; /* 中央揃え */
-        padding: 0 20px; /* 左右に余白を追加 */
+        padding: 0; /* 共通の.contBoxで設定するため削除 */
     }
 
     #about .profile-sidebar {

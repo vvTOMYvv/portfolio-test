@@ -92,6 +92,7 @@ nav ul li a {
 
 /* contents */
 #main h2.ttl {
+    margin-top: 60px;
     margin-bottom: 40px;
     text-align: center;
     line-height: 1.0;
@@ -263,7 +264,7 @@ nav.footer {
 // ABOUT PAGE
 // ==================================== */
 #about .contBox {
-    padding: 0 5%;
+    padding: 0 19.5px;
 }
 
 /* h2タイトルの調整 */
@@ -351,7 +352,7 @@ nav.footer {
 // WORKS PAGE
 // ==================================== */
 #works-page .contBox {
-    padding: 0 5%;
+    padding: 0 19.5px;
 }
 
 #works-page #works-list {

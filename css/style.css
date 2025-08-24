@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /* ====================================
-// common.css から統合された部分
+// 全体（common）
 // ==================================== */
 html {
     scroll-behavior: smooth;
@@ -208,9 +208,7 @@ nav.footer {
     margin-bottom: 0;
 }
 
-/* ====================================
-// WORKS SECTION (TOP PAGE)
-// ==================================== */
+/* WORKS SECTION (TOP PAGE) */
 #works {
     padding: 0 5%;
     margin-bottom: 60px;
@@ -268,51 +266,86 @@ nav.footer {
 #about .contBox {
     padding: 0 5%;
 }
-#about .fBox01 {
-    margin-bottom: 20px;
+
+/* h2タイトルの調整 */
+#about .ttl.large {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+#about .profile-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-#about .fBox01 .imgFace {
-    margin-bottom: 30px;
+
+#about .profile-sidebar {
+    text-align: center;
+    margin-bottom: 40px;
 }
-#about .fBox01 .imgFace img {
-    width: 140px;
-    height: auto;
-    border-radius: 50%;
-    border: 3px solid #eee;
+
+#about .profile-image {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 20px;
 }
-#about .fBox01 .fBoxRight {
+
+#about .profile-name .name-jp {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#about .profile-name .name-en {
+    font-size: 12px;
+    color: #888;
+    letter-spacing: 0.5px;
+}
+
+#about .profile-main {
     width: 100%;
 }
-#about .fBox01 .fBoxRight h2 {
-    font-size: 16px;
+
+#about .profile-main .txtBox {
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+#about .profile-sub-ttl {
+    font-size: 18px;
     font-weight: bold;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    text-align: left;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
 }
-#about .fBox01 .fBoxRight h2:first-of-type {
-    margin-top: 0;
-}
-#about .companyProf {
-    margin-bottom: 25px;
-    /* Flexboxを使いdtとddを横並びにする */
+
+#about .profile-list {
     display: flex;
     flex-wrap: wrap;
+    line-height: 1.8;
+    margin-bottom: 10px;
 }
-#about .companyProf dt {
-    font-weight: bold;
-    width: 150px; /* 画像のようなレイアウトにするため、dtの幅を固定 */
+
+#about .profile-list dt {
+    width: 80px;
+    padding-right: 15px;
     flex-shrink: 0;
-    margin-bottom: 5px;
-    line-height: 1.5;
+    font-weight: bold;
+    color: #555;
 }
-#about .companyProf dd {
+
+#about .profile-list dd {
+    width: calc(100% - 95px);
     margin-left: 0;
-    margin-bottom: 5px;
-    line-height: 1.5;
+}
+
+#about .profile-list.detail dt {
+    width: 150px;
+}
+
+#about .profile-list.detail dd {
+    width: calc(100% - 165px);
 }
 
 /* ====================================
@@ -369,14 +402,6 @@ nav.footer {
     font-size: 16px;
     line-height: 1.7;
     margin: 0;
-}
-
-/* ====================================
-// HOBBY PAGE
-// ==================================== */
-#hobby .txtBox {
-    margin-bottom: 40px;
-    line-height: 1.8;
 }
 
 /* ====================================
@@ -629,10 +654,7 @@ nav.footer {
         margin-bottom: 20px;
     }
     
-    /* ====================================
-    // ABOUT PAGE (REVISED)
-    // ==================================== */
-
+    /* ABOUT PAGE (REVISED) */
     /* スマホ表示のスタイル（ベース） */
     #about .profile-container {
         display: flex;

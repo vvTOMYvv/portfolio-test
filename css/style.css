@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /* ====================================
-// 基本スタイル（共通）
+// common.css から統合された部分
 // ==================================== */
 html {
     scroll-behavior: smooth;
@@ -11,16 +11,17 @@ body {
     font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
     font-size: 14px;
     color: #333;
-    line-height: 1.8; /* 全体の行間を少し広げて読みやすく */
+    line-height: 1.9;
+    text-align: left;
     -webkit-text-size-adjust: 100%;
 }
 a {
     color: #333;
     text-decoration: none;
-    transition: opacity 0.3s; /* ホバー時に滑らかな変化を追加 */
 }
 a:hover {
-    opacity: 0.7;
+    color: #333;
+    text-decoration: none;
 }
 .sp {
     display: block;
@@ -28,102 +29,136 @@ a:hover {
 .pc {
     display: none;
 }
-img {
-    max-width: 100%;
-    height: auto;
-    vertical-align: bottom; /* 画像下の余白をなくす */
+
+/* header */
+header {
+    margin-bottom: 25px;
 }
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+header#inner {
+    margin-bottom: 30px;
+}
+header h1 {
+    margin: 21px 0 25px 0;
+    padding-left: 30px;
+    text-align: left;
+}
+header h1 img {
+    width: 196px;
+    height: 25px;
+}
+nav {
+    margin-bottom: 20px;
+    border-top: 1px solid #d9d9d9;
+}
+nav li {
+    float: left;
+    width: 50%;
+    border-bottom: 1px solid #d9d9d9;
+    text-align: center;
 }
 
-/* ====================================
-// ヘッダー（共通）
-// ==================================== */
-header {
-    padding: 20px;
+#about nav li.about a,
+#works nav li.works a,
+#hobby nav li.hobby a {
+    opacity: 0.3;
 }
-header h1#logo {
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    margin: 0 0 20px 0;
+nav ul li:nth-child(odd) {
+    background: url(/img/line_nav.gif) repeat-y right top;
+    background-size: 1px 10px;
 }
-header nav ul {
-    display: flex;
-    justify-content: center;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-}
-header nav li {
-    width: 33.33%;
-    text-align: center;
-}
-header nav li + li {
-    border-left: 1px solid #eee; /* 区切り線 */
-}
-header nav a {
+nav ul li a {
     display: block;
+    width: 100%;
     padding: 12px 0;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-size: 13px;
     letter-spacing: 0.1em;
 }
-/* 現在表示しているページのナビゲーションを少し薄くする */
-body#about nav li.about a,
-body#works-page nav li.works a,
-body#hobby nav li.hobby a {
-    opacity: 0.5;
-}
-
-
-/* ====================================
-// メインコンテンツ（共通）
-// ==================================== */
-#main.inner {
-    padding: 0 20px; /* スマホでの左右余白 */
-}
-h2.ttl.large {
-    margin: 0 0 40px 0;
+.socialBtn {
     text-align: center;
-    line-height: 1.2;
+    margin: 0 auto;
+}
+.socialBtn li {
+    display: inline;
+    margin-right: 12px;
+}
+.socialBtn li.last {
+    margin-right: 0;
+}
+.socialBtn img {
+    width: 28px;
+    height: 28px;
+}
+
+/* contents */
+#main h2.ttl {
+    margin-bottom: 40px;
+    text-align: center;
+    line-height: 1.0;
     font-family: 'Lato', sans-serif;
     font-weight: 100;
     font-size: 40px;
     letter-spacing: 0.05em;
 }
 
-/* ====================================
-// フッター（共通）
-// ==================================== */
-footer {
-    padding: 20px;
-    margin-top: 60px;
+#main.inner h2.ttl {
+    margin-bottom: 25px;
 }
-footer .footer nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 30px; /* 項目間の余白 */
+#main h3.ttl {
+    margin-bottom: 12px;
+    text-align: center;
+    line-height: 1.0;
+    font-size: 22px;
+    color: #505050;
+}
+#main p.ttl {
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 1.0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    color: #a5a5a5;
+}
+.contBox {
+    margin: 0 20px;
+}
+.toTop {
+    text-align: center;
+}
+.toTop a {
+    display: block;
+    margin-bottom: 40px;
+    padding: 8px 20px;
+}
+.toTop img {
+    width: 22px;
+    height: 14px;
+}
+
+/* footer */
+nav.footer {
     margin-bottom: 20px;
 }
-footer .footer nav a {
-    font-family: 'Lato', sans-serif;
-}
-footer #copyright {
+#copyright {
+    margin-bottom: 20px;
     text-align: center;
     font-size: 12px;
-    color: #888;
 }
 
 /* ====================================
-// トップページ (`index.html`)
+// TOP PAGE
 // ==================================== */
 #mainVisual {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     text-align: center;
+}
+#mainVisual img {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
 }
 #mainVisual .pc {
     display: none;
@@ -132,249 +167,630 @@ footer #copyright {
     display: block;
 }
 
-/* Service (トップページ) */
+/* SERVICE SECTION */
 #service {
     text-align: center;
     margin-bottom: 60px;
-    padding: 0 20px;
+    padding: 0 5%;
 }
 #service .ttl {
     margin-bottom: 30px;
 }
-#service .service-container {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+.service-container section {
+    width: 100%;
+    margin-bottom: 30px;
+    box-sizing: border-box;
 }
-#service .service-container section .ttl {
-    font-size: 20px;
+.service-container section .ttl {
+    font-size: 24px;
     font-weight: bold;
     margin-bottom: 5px;
 }
-#service .service-container section p.ttl {
-    font-size: 13px;
+.service-container section p.ttl {
+    font-size: 14px;
+    font-weight: normal;
     color: #a5a5a5;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
-#service .service-container section .icon {
+.service-container section .icon {
     margin-bottom: 20px;
 }
-#service .service-container section .icon img {
+.service-container section .icon img {
     width: 60px;
+    height: auto;
 }
-#service .service-container section .text01 {
+.service-container section .text01 {
     font-size: 14px;
-    line-height: 1.7;
+    line-height: 1.6;
     text-align: left;
 }
-
-/* Works (トップページ) */
-#works {
-    padding: 0 20px;
-    margin-bottom: 60px;
-}
-#works .worksList {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-#works .worksList li {
-    border: 1px solid #eee;
-}
-#works .worksList .photo img {
-    display: block;
+.service-container section.last {
+    margin-bottom: 0;
 }
 
 /* ====================================
-// Aboutページ (`about.html`)
+// WORKS SECTION (TOP PAGE)
 // ==================================== */
-#about .profile-container {
+#works {
+    padding: 0 5%;
+    margin-bottom: 60px;
+}
+#works .worksList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: left;
+}
+#works .worksList li {
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+    box-sizing: border-box;
+}
+#works .worksList li:last-child {
+    margin-bottom: 0;
+}
+#works .worksList .photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+#works .worksList li .work-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    line-height: 1.2;
+}
+#works .worksList li .cont {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+#works .worksList li .detail {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+    line-height: 1;
+}
+#works .worksList li .detail:hover {
+    text-decoration: underline;
+}
+
+/* ====================================
+// ABOUT PAGE
+// ==================================== */
+#about .contBox {
+    padding: 0 5%;
+}
+#about .fBox01 {
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-#about .profile-sidebar {
-    text-align: center;
-    margin-bottom: 40px;
+#about .fBox01 .imgFace {
+    margin-bottom: 30px;
+}
+#about .fBox01 .imgFace img {
+    width: 140px;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid #eee;
+}
+#about .fBox01 .fBoxRight {
     width: 100%;
 }
-#about .profile-image {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    margin-bottom: 20px;
-}
-#about .profile-name .name-jp {
-    font-size: 18px;
+#about .fBox01 .fBoxRight h2 {
+    font-size: 16px;
     font-weight: bold;
-}
-#about .profile-name .name-en {
-    font-size: 12px;
-    color: #888;
-    letter-spacing: 0.5px;
-}
-#about .profile-main {
-    width: 100%;
-}
-#about .profile-main .txtBox {
-    margin-bottom: 40px;
-}
-#about .profile-sub-ttl {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 40px 0 20px 0;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #eee;
-}
-#about .profile-list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 10px;
-}
-#about .profile-list dt {
-    width: 80px;
-    padding-right: 15px;
-    flex-shrink: 0;
-    font-weight: bold;
-    color: #555;
-}
-#about .profile-list dd {
-    width: calc(100% - 95px);
-}
-#about .profile-list.detail dt {
-    width: 150px;
-}
-#about .profile-list.detail dd {
-    width: calc(100% - 165px);
-}
-
-
-/* ====================================
-// Worksページ (`works.html`)
-// ==================================== */
-#works-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px 20px;
-}
-#works-list li {
-    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 15px;
     text-align: left;
 }
-#works-list .work-image {
-    display: block;
-    margin-bottom: 15px;
-    border: 1px solid #eee;
+#about .fBox01 .fBoxRight h2:first-of-type {
+    margin-top: 0;
 }
+#about .companyProf {
+    margin-bottom: 25px;
+    /* Flexboxを使いdtとddを横並びにする */
+    display: flex;
+    flex-wrap: wrap;
+}
+#about .companyProf dt {
+    font-weight: bold;
+    width: 150px; /* 画像のようなレイアウトにするため、dtの幅を固定 */
+    flex-shrink: 0;
+    margin-bottom: 5px;
+    line-height: 1.5;
+}
+#about .companyProf dd {
+    margin-left: 0;
+    margin-bottom: 5px;
+    line-height: 1.5;
+}
+
+/* ====================================
+// WORKS PAGE (REVISED)
+// ==================================== */
+
+/* 作品リスト全体のスタイル */
+#works-list {
+    display: flex;
+    flex-wrap: wrap; /* 要素を折り返す */
+    gap: 40px 20px; /* 行の隙間: 40px, 列の隙間: 20px */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 作品一つひとつのアイテム */
+#works-list li {
+    width: 100%; /* スマホでは1カラム（これが基本） */
+    box-sizing: border-box;
+    text-align: left;
+}
+
+#works-list .work-image {
+    width: 100%;
+    height: auto; /* 高さは自動調整 */
+    display: block;
+    margin-bottom: 15px; /* 画像とテキストの間の余白 */
+    border: 1px solid #eee; /* 画像に薄い枠線を追加 */
+}
+
 #works-list .work-title {
     font-size: 16px;
     font-weight: bold;
     margin: 0 0 5px 0;
+    line-height: 1.3;
 }
+
 #works-list .work-skill {
     font-size: 12px;
     color: #777;
     margin: 0 0 10px 0;
+    line-height: 1.4;
 }
+
 #works-list .work-desc {
     font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ----- Tablet (768px以上) ----- */
+@media only screen and (min-width: 768px) {
+    #works-list {
+        gap: 50px 4%; /* 行間を広げ、列間は割合で指定 */
+    }
+
+    #works-list li {
+        width: 48%; /* 2カラムレイアウト (48% * 2 + 4% = 100%) */
+    }
+}
+
+/* ----- PC (1024px以上) ----- */
+@media only screen and (min-width: 1024px) {
+    #works-list {
+        gap: 60px 3%; /* PC用の余白に調整 */
+    }
+
+    #works-list li {
+        width: 31.33%; /* 3カラムレイアウト (31.33% * 3 + 3% * 2 ≒ 100%) */
+    }
 }
 
 /* ====================================
-// ページトップへ戻るボタン
+// Media Queries
 // ==================================== */
-.toTop {
-    text-align: center;
-    margin-top: 60px;
+/* ----- Tablet (760px以上) ----- */
+@media only screen and (min-width: 760px) {
+    /* 他のスタイルは省略... */
+
+    /* WORKS PAGE */
+    #works-page #worksList {
+        justify-content: space-between;
+        gap: 60px 4%; /* タブレット以上のギャップ */
+        margin-bottom: 60px; /* リスト下部の余白 */
+    }
+
+    #works-page #worksList li {
+        width: 48%; /* タブレットでは2カラム */
+        margin-bottom: 0; /* Flexboxのgapを使うため個別マージンは0に */
+    }
+
+    /* PC (961px以上) */
+    @media only screen and (min-width: 961px) {
+        /* 他のスタイルは省略... */
+
+        /* WORKS PAGE */
+        #works-page #worksList {
+            justify-content: space-between;
+            gap: 80px 5%; /* PCでのギャップをさらに大きく */
+        }
+    
+        #works-page #worksList li {
+            width: 30%; /* PCでは3カラム */
+            margin-bottom: 0;
+        }
+    }
 }
 
+/* ====================================
+// HOBBY PAGE
+// ==================================== */
+#hobby .txtBox {
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
 
-/* ==========================================================
-// タブレットとPC表示のスタイル（画面幅768px以上で適用）
-// ========================================================== */
-@media only screen and (min-width: 768px) {
-    .sp { display: none; }
-    .pc { display: block; }
-    
-    /* ヘッダー */
+/* ====================================
+// Media Queries
+// ==================================== */
+/* ----- Tablet (760px以上) ----- */
+@media only screen and (min-width: 760px) {
+    /* common.css から統合された部分 */
+    .sp {
+        display: none;
+    }
+    .pc {
+        display: block;
+    }
     header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width: 1080px; /* PC用の最大幅 */
+        position: relative;
+        max-width: 960px;
+        height: 270px;
         margin: 0 auto;
-        padding: 30px 40px;
     }
-    header h1#logo {
+    header#inner {
+        margin-bottom: 30px;
+    }
+    header h1 {
+        position: absolute;
+        top: 107px;
+        left: 50px;
         margin: 0;
-        text-align: left;
+        padding-left: 0;
+        text-align: center;
     }
-    header nav ul {
-        border: none;
+    header h1 img {
+        width: 275px;
+        height: 35px;
     }
-    header nav li + li {
-        border-left: none;
-        margin-left: 30px;
+    nav {
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+        margin-bottom: 0;
+        border-top: none;
     }
-
-    /* メインコンテンツ */
+    nav li {
+        margin-left: 50px;
+        display: inline;
+        float: none;
+        border-bottom: none;
+        text-align: right;
+    }
+    nav ul li:nth-child(odd) {
+        background: none;
+    }
+    nav ul li a {
+        display: inline;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.1em;
+    }
+    .socialBtn {
+        position: absolute;
+        top: 112px;
+        right: 30px;
+    }
+    .socialBtn li {
+        display: inline;
+        margin-right: 14px;
+    }
+    .socialBtn li.last {
+        margin-right: 0;
+    }
+    .socialBtn img {
+        width: 22px;
+        height: 22px;
+    }
     #main.inner {
-        max-width: 1080px;
+        max-width: 960px;
+        padding: 0;
         margin: 0 auto;
-        padding: 0 40px;
     }
-    h2.ttl.large {
+    #main h2.ttl.large {
+        margin: 0 0 70px 0;
         font-size: 46px;
         text-align: left;
+    }
+    .contBox {
+        margin: 0 40px;
+    }
+    footer {
+        max-width: 960px;
+        margin: 0 5%;
+        padding-bottom: 20px;
+    }
+    nav.footer {
+        position: relative;
+        float: left;
+        width: 60%;
+        margin: 60px 0 0 30px;
+    }
+    nav.footer a {
+        font-size: 14px;
+        font-weight: 400;
+    }
+    nav.footer li {
+        margin: 0 40px 0 0;
+    }
+    #copyright {
+        float: right;
+        width: 40%;
+        margin-top: 32px;
+        margin-bottom: 0;
+        text-align: right;
+    }
+
+    /* TOP PAGE */
+    #mainVisual {
+        margin-bottom: 80px;
+        background-color: #ecebeb;
+        text-align: center;
+    }
+    #mainVisual img {
+        max-width: 960px;
+        height: auto;
+    }
+    #mainVisual .pc {
+        display: block;
+    }
+    #mainVisual .sp {
+        display: none;
+    }
+    #service {
+        margin-bottom: 80px;
+    }
+    .service-container {
+        display: flex;
+        justify-content: center;
+        gap: 2%;
+    }
+    .service-container section {
+        width: 32%;
+        margin-bottom: 0;
+    }
+    #works {
+        max-width: 960px;
+        margin: 0 auto 80px;
+        padding: 0;
+    }
+    #works .worksList {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2%;
+    }
+    #works .worksList li {
+        width: 32%;
+        margin-bottom: 20px;
+    }
+    
+    /* ABOUT PAGE */
+    #about .fBox01 {
+        margin: 0 40px;
+    }
+    #about .fBox01 .imgFace {
+        float: none;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    #about .fBox01 .fBoxRight {
+        padding-left: 0;
+    }
+    
+    /* WORKS PAGE */
+    #works-page .worksList {
+        max-width: 920px;
+        margin: 0 auto;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4%;
+    }
+    #works-page .worksList li {
+        box-sizing: border-box;
+        width: 48%;
         margin-bottom: 60px;
     }
-
-    /* フッター */
-    footer {
-        max-width: 1080px;
-        margin: 80px auto 0;
-        padding: 40px;
-        border-top: 1px solid #eee;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    #works-page .worksList li:nth-child(2n) {
+        margin-right: 0;
     }
-    footer .footer nav {
-        margin: 0;
+    #works-page .worksList li .readLast {
+        text-align: center;
     }
-
-    /* トップページ */
-    #mainVisual { margin-bottom: 80px; }
-    #service { margin-bottom: 80px; padding: 0; }
-    #service .service-container { flex-direction: row; gap: 4%; }
-    #works { margin-bottom: 80px; padding: 0; }
-    #works .worksList { flex-direction: row; gap: 2%; }
-    
-    /* Aboutページ */
-    #about .profile-container { flex-direction: row; align-items: flex-start; }
-    #about .profile-sidebar { width: 250px; flex-shrink: 0; text-align: left; }
-    #about .profile-main { width: calc(100% - 300px); }
-
-    /* Worksページ */
-    #works-list { gap: 50px 4%; }
-    #works-list li { width: 48%; }
 }
 
-/* ==========================================================
-// PC専用のスタイル（画面幅1080px以上で適用）
-// ========================================================== */
-@media only screen and (min-width: 1080px) {
-    
-    /* Works (トップページ) */
-    #works .worksList {
-        gap: 3%;
+/* ----- PC (961px以上) ----- */
+@media only screen and (min-width: 961px) {
+    /* common.css から統合された部分 */
+    a:hover {
+        text-decoration: underline;
+    }
+    header h1 {
+        position: absolute;
+        top: 105px;
+        left: 0;
+    }
+    nav {
+        position: absolute;
+        bottom: 30px;
+        right: 0;
+    }
+    .socialBtn {
+        position: absolute;
+        top: 112px;
+        right: 10px;
+    }
+    #main.inner {
+        max-width: 960px;
+        padding: 0;
+        margin: 0 auto;
+    }
+    .contBox {
+        margin: 0;
+    }
+    footer {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+    nav.footer {
+        margin-left: 0;
     }
 
-    /* Worksページ */
-    #works-list {
-        gap: 60px 3%;
+    /* TOP PAGE */
+    #service {
+        margin-bottom: 100px;
     }
-    #works-list li {
-        width: 31.33%; /* 3カラム */
+    .service-container {
+        gap: 5%;
+    }
+    .service-container section {
+        width: 30%;
+    }
+    #works {
+        margin-bottom: 100px;
+    }
+    #works .worksList {
+        gap: 5%;
+    }
+    #works .worksList li {
+        width: 30%;
+        margin-bottom: 20px;
+    }
+    
+    /* ====================================
+    // ABOUT PAGE (REVISED)
+    // ==================================== */
+
+    /* スマホ表示のスタイル（ベース） */
+    #about .profile-container {
+        display: flex;
+        flex-direction: column; /* 縦並び */
+        align-items: center; /* 中央揃え */
+        padding: 0 20px; /* 左右に余白を追加 */
+    }
+
+    #about .profile-sidebar {
+        text-align: center;
+        margin-bottom: 40px;
+        width: 100%;
+    }
+
+    #about .profile-image {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        margin-bottom: 20px;
+    }
+
+    #about .profile-name .name-jp {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    #about .profile-name .name-en {
+        font-size: 12px;
+        color: #888;
+        letter-spacing: 0.5px;
+    }
+
+    #about .profile-main {
+        width: 100%;
+    }
+
+    #about .profile-main .txtBox {
+        margin-bottom: 40px;
+        line-height: 1.8;
+    }
+
+    #about .profile-sub-ttl {
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #eee;
+    }
+
+    #about .profile-list {
+        display: flex;
+        flex-wrap: wrap;
+        line-height: 1.8;
+        margin-bottom: 10px;
+    }
+
+    #about .profile-list dt {
+        width: 80px;
+        padding-right: 15px;
+        flex-shrink: 0;
+        font-weight: bold;
+        color: #555;
+    }
+
+    #about .profile-list dd {
+        width: calc(100% - 95px); /* dtの幅とpaddingを引いた残り */
+        margin-left: 0;
+    }
+
+    #about .profile-list.detail dt {
+        width: 150px;
+    }
+
+    #about .profile-list.detail dd {
+        width: calc(100% - 165px);
+    }
+
+    /* ==========================================================
+    タブレットとPC表示のスタイル（画面幅768px以上で適用）
+    ========================================================== */
+    @media only screen and (min-width: 768px) {
+
+        /* ★★★ 問題1の修正：メインコンテンツ全体を中央揃え ★★★ */
+        #main.inner {
+            max-width: 960px; /* コンテンツの最大幅を指定 */
+            margin: 0 auto; /* 上下のマージンは0、左右のマージンは自動（→中央揃え） */
+            padding: 0 20px; /* コンテンツの左右に少し余白を持たせる */
+        }
+        
+        /* ★★★ 問題2の修正：2カラムレイアウトを適用 ★★★ */
+        #about .profile-container {
+            flex-direction: row; /* 横並び */
+            align-items: flex-start; /* 上揃え */
+            justify-content: space-between;
+            padding: 0;
+        }
+
+        #about .profile-sidebar {
+            width: 250px;
+            flex-shrink: 0;
+            margin-bottom: 0;
+            text-align: left;
+        }
+
+        #about .profile-main {
+            width: calc(100% - 300px); /* 左カラムとの間に余白を持たせる */
+        }
     }
 }

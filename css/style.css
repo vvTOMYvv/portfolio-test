@@ -92,7 +92,6 @@ nav ul li a {
 
 /* contents */
 #main h2.ttl {
-    margin-top: 60px;
     margin-bottom: 40px;
     text-align: center;
     line-height: 1.0;
@@ -123,7 +122,8 @@ nav ul li a {
     color: #a5a5a5;
 }
 .contBox {
-    margin: 0 20px;
+    margin: 0;
+    padding: 0 19.5px;
 }
 .toTop {
     text-align: center;
@@ -263,9 +263,6 @@ nav.footer {
 /* ====================================
 // ABOUT PAGE
 // ==================================== */
-#about .contBox {
-    padding: 0 19.5px;
-}
 
 /* h2タイトルの調整 */
 #about .ttl.large {
@@ -351,9 +348,6 @@ nav.footer {
 /* ====================================
 // WORKS PAGE
 // ==================================== */
-#works-page .contBox {
-    padding: 0 19.5px;
-}
 
 #works-page #works-list {
     list-style: none;
@@ -417,10 +411,7 @@ nav.footer {
         display: block;
     }
     header {
-        position: relative;
-        max-width: 960px;
-        height: 270px;
-        margin: 0 auto;
+    margin-bottom: 25px;
     }
     header#inner {
         margin-bottom: 30px;

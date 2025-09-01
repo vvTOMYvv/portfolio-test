@@ -61,12 +61,12 @@ header .header-container {
 }
 
 #logo {
-    font-family: var(--font-primary);
-    font-weight: 700;
-    font-size: 24px;
-    letter-spacing: 0.05em;
     margin-bottom: 20px;
-    text-align: left;
+}
+
+#logo img {
+    height: 30px; /* スマホでのロゴ高さを指定 */
+    width: auto;
 }
 
 header nav ul {
@@ -629,6 +629,9 @@ footer nav a {
     }
     #logo {
         margin-bottom: 0;
+    }
+    #logo img {
+        height: 38px;
     }
     header nav ul {
         border: none;

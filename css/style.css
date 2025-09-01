@@ -419,6 +419,191 @@ footer nav a {
     font-size: 16px;
 }
 
+/* ====================================
+// Login Page Styles
+// ==================================== */
+.login-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f2f5;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* ログインページ専用のフォント指定 */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.login-form-box {
+    background: #ffffff;
+    padding: 60px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.login-form-box h1 {
+    font-size: 2.8rem;
+    color: #333;
+    margin-bottom: 25px;
+    letter-spacing: 0.05em;
+}
+
+.login-form-box p#message {
+    color: #e53935;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    min-height: 1.5em; /* エラーメッセージ表示時のレイアウト崩れを防止 */
+}
+
+.login-form-box input[type="text"],
+.login-form-box input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1.6rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.login-form-box input[type="text"]:focus,
+.login-form-box input[type="password"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+.login-form-box button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-form-box button:hover {
+    background-color: #0056b3;
+}
+
+/* ====================================
+// Works Detail Page (Case Study)
+// ==================================== */
+#works-detail-page #main {
+    padding-bottom: 60px;
+}
+
+.case-study-hero {
+    margin-bottom: 40px;
+    border: 1px solid #eee;
+}
+
+.case-study-hero img {
+    width: 100%;
+}
+
+.case-study-title {
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.case-study-summary {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.case-study-summary div {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.case-study-summary div:last-child {
+    border-bottom: none;
+}
+
+.case-study-summary dt {
+    width: 100px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.case-study-summary dd {
+    width: calc(100% - 100px);
+    line-height: 1.6;
+}
+
+.case-study-section {
+    margin-bottom: 40px;
+}
+
+.case-study-section h4 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    border-left: 4px solid var(--color-accent);
+}
+
+.case-study-section p {
+    font-size: 1.6rem;
+    line-height: 1.9;
+}
+
+.case-study-back-link {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.case-study-back-link a {
+    display: inline-block;
+    font-size: 1.6rem;
+    color: var(--color-accent);
+    font-weight: bold;
+    padding: 10px 30px;
+    border: 2px solid var(--color-accent);
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.case-study-back-link a:hover {
+    background-color: var(--color-accent);
+    color: #fff;
+    opacity: 1.0;
+}
+
+
+/* Tablet and up */
+@media (min-width: 768px) {
+    .case-study-title {
+        font-size: 2.8rem;
+    }
+    .case-study-summary div {
+        flex-wrap: nowrap;
+    }
+    .case-study-summary dt {
+        width: 150px;
+    }
+    .case-study-summary dd {
+        width: calc(100% - 150px);
+    }
+}
 
 /* ==================================================
 // タブレット以上 (Tablet & over / 768px~)

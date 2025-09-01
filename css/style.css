@@ -496,14 +496,14 @@ footer nav a {
 }
 
 /* ====================================
-// Works Detail Page (Case Study)
+// Works Detail Page (Case Study) - REVISED
 // ==================================== */
 #works-detail-page #main {
-    padding-bottom: 60px;
+    padding-bottom: 80px; /* 余白調整 */
 }
 
 .case-study-hero {
-    margin-bottom: 40px;
+    margin-bottom: 50px; /* 余白調整 */
     border: 1px solid #eee;
 }
 
@@ -511,25 +511,18 @@ footer nav a {
     width: 100%;
 }
 
-.case-study-title {
-    font-size: 2.4rem;
-    font-weight: bold;
-    line-height: 1.6;
-    margin-bottom: 30px;
-}
-
 .case-study-summary {
     background-color: #f9f9f9;
     border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 50px;
+    padding: 25px 30px; /* 余白調整 */
+    margin-bottom: 60px; /* 余白調整 */
 }
 
 .case-study-summary div {
     display: flex;
     flex-wrap: wrap;
-    padding: 10px 0;
-    font-size: 1.5rem;
+    padding: 12px 0; /* 余白調整 */
+    font-size: 1.4rem; /* サイズ調整 */
     border-bottom: 1px solid #eee;
 }
 
@@ -538,14 +531,16 @@ footer nav a {
 }
 
 .case-study-summary dt {
-    width: 100px;
-    font-weight: bold;
+    width: 110px; /* サイズ調整 */
+    font-weight: 600; /* 太さ調整 */
+    color: #555;
     flex-shrink: 0;
 }
 
 .case-study-summary dd {
-    width: calc(100% - 100px);
-    line-height: 1.6;
+    width: calc(100% - 110px); /* サイズ調整 */
+    line-height: 1.7; /* 行間調整 */
+    color: #333;
 }
 
 .case-study-section {
@@ -553,29 +548,29 @@ footer nav a {
 }
 
 .case-study-section h4 {
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 15px;
-    padding-left: 10px;
-    border-left: 4px solid var(--color-accent);
+    font-size: 1.7rem; /* サイズ調整 */
+    font-weight: 600;  /* 太さ調整 */
+    margin-bottom: 20px; /* 余白調整 */
+    padding-left: 12px; /* 余白調整 */
+    border-left: 3px solid var(--color-accent); /* デザイン調整 */
 }
 
 .case-study-section p {
-    font-size: 1.6rem;
-    line-height: 1.9;
+    font-size: 1.5rem; /* サイズ調整 */
+    line-height: 2;    /* 行間調整 */
 }
 
 .case-study-back-link {
     text-align: center;
-    margin-top: 60px;
+    margin-top: 80px; /* 余白調整 */
 }
 
 .case-study-back-link a {
     display: inline-block;
-    font-size: 1.6rem;
+    font-size: 1.5rem; /* サイズ調整 */
     color: var(--color-accent);
-    font-weight: bold;
-    padding: 10px 30px;
+    font-weight: 600; /* 太さ調整 */
+    padding: 12px 35px; /* 余白調整 */
     border: 2px solid var(--color-accent);
     border-radius: 5px;
     text-decoration: none;
@@ -588,20 +583,20 @@ footer nav a {
     opacity: 1.0;
 }
 
-
 /* Tablet and up */
 @media (min-width: 768px) {
-    .case-study-title {
-        font-size: 2.8rem;
-    }
     .case-study-summary div {
         flex-wrap: nowrap;
+        font-size: 1.5rem; /* サイズ調整 */
     }
     .case-study-summary dt {
         width: 150px;
     }
     .case-study-summary dd {
         width: calc(100% - 150px);
+    }
+    .case-study-section p {
+        font-size: 1.6rem; /* サイズ調整 */
     }
 }
 

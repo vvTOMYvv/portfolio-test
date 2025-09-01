@@ -253,8 +253,11 @@ footer nav a {
 /* ====================================
 // Aboutページ (About Page)
 // ==================================== */
-#about {
-    padding: 0 5% 60px;
+/* 下層ページのメインコンテンツエリアに上下の余白を追加 */
+#about #main,
+#works-page #main {
+    padding-top: 20px;
+    padding-bottom: 60px;
 }
 
 .profile-container {
@@ -335,8 +338,18 @@ footer nav a {
     gap: 40px;
 }
 
+/* Worksページ画像表示崩れ修正 */
 #works-list li {
-    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+}
+
+#works-list .work-image {
+    object-fit: cover; /* 画像の比率を保ったままトリミング */
+    object-position: top; /* 画像の上部を優先的に表示 */
+    height: 350px; /* 表示する高さを350pxに固定 */
+    width: 100%;
+    border-bottom: 1px solid #eee;
 }
 
 #works-list .work-image {

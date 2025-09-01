@@ -273,19 +273,19 @@ footer nav a {
 
 .work-card .cont {
     font-size: 14px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 /* 矢印アイコンのスタイル */
 .work-card a::after {
-    content: '→'; /* 矢印アイコン */
+    content: '→';
     position: absolute;
-    bottom: 15px; /* 変更：位置を20px -> 15pxに下げました */
-    right: 15px; /* 位置調整 */
+    bottom: 10px;
+    right: 15px;
     font-size: 24px;
     line-height: 1;
-    color: var(--color-accent);
-    transition: transform 0.3s;
+    color: var(--color-gray);
+    transition: transform 0.2s;
 }
 
 .work-card:hover a::after { /* ホバー時に矢印を少し右に移動 */

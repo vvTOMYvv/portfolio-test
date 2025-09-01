@@ -427,6 +427,10 @@ footer nav a {
     }
     
     /* トップページ */
+    #mainVisual {
+        max-width: var(--content-width);
+        margin: 0 auto;
+    }
     #service {
         padding: 80px 5%;
     }

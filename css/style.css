@@ -230,26 +230,39 @@ footer nav a {
 }
 
 .work-card {
+    position: relative; /* 矢印アイコンの基準にするため */
     background-color: #fff;
     border: 1px solid #eee;
     overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* 微かな影を追加 */
+    transition: transform 0.3s, box-shadow 0.3s; /* ホバー時のアニメーション */
 }
 
-.work-card .photo a {
+.work-card:hover { /* カード全体をホバーで浮き上がらせる */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.work-card a { /* カード全体をリンクにするためのスタイル */
     display: block;
+    text-decoration: none;
+    color: inherit; /* 親要素の文字色を継承 */
 }
 
 .work-card .photo img {
     width: 100%;
+    display: block; /* 画像下の余白をなくす */
     transition: transform 0.3s;
 }
 
-.work-card .photo a:hover img {
+.work-card:hover .photo img { /* ホバー時写真拡大は維持 */
     transform: scale(1.05);
 }
 
 .work-card .work-info {
     padding: 15px;
+    padding-right: 45px; /* 矢印アイコンのスペース確保 */
+    position: relative;
 }
 
 .work-card .work-title {
@@ -263,20 +276,20 @@ footer nav a {
     margin-bottom: 15px;
 }
 
-.work-card .detail {
-    display: inline-block;
-    background-color: var(--color-accent);
-    color: #fff;
-    font-weight: bold;
-    padding: 8px 24px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: transform 0.2s, box-shadow 0.2s;
+/* 矢印アイコンのスタイル */
+.work-card a::after {
+    content: '→'; /* 矢印アイコン */
+    position: absolute;
+    bottom: 20px; /* 位置調整 */
+    right: 15px; /* 位置調整 */
+    font-size: 24px;
+    line-height: 1;
+    color: var(--color-accent);
+    transition: transform 0.3s;
 }
-.work-card .detail:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    opacity: 1.0; /* もともとのopacity変化を無効化 */
+
+.work-card:hover a::after { /* ホバー時に矢印を少し右に移動 */
+    transform: translateX(5px);
 }
 
 /* ====================================

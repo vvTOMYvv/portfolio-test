@@ -8,7 +8,7 @@
     --font-japanese: '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
     --color-text: #333;
     --color-gray: #a5a5a5;
-    --color-accent: #007bff;
+    --color-accent: #6500fc;
     --border-color: #d9d9d9;
     --content-width: 960px;
 }
@@ -284,7 +284,7 @@ footer nav a {
     right: 15px;
     font-size: 24px;
     line-height: 1;
-    color: var(--color-gray);
+    color: var(--color-accent);
     transition: transform 0.2s;
 }
 

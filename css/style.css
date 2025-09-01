@@ -239,8 +239,8 @@ footer nav a {
 }
 
 .work-card:hover { /* カード全体をホバーで浮き上がらせる */
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px); /* 変更：浮き上がりを5px -> 3pxに */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08); /* 変更：影を控えめに */
 }
 
 .work-card a { /* カード全体をリンクにするためのスタイル */
@@ -256,7 +256,7 @@ footer nav a {
 }
 
 .work-card:hover .photo img { /* ホバー時写真拡大は維持 */
-    transform: scale(1.05);
+    transform: scale(1.02); /* 変更：拡大率を1.05 -> 1.02に */
 }
 
 .work-card .work-info {
@@ -280,7 +280,7 @@ footer nav a {
 .work-card a::after {
     content: '→'; /* 矢印アイコン */
     position: absolute;
-    bottom: 20px; /* 位置調整 */
+    bottom: 15px; /* 変更：位置を20px -> 15pxに下げました */
     right: 15px; /* 位置調整 */
     font-size: 24px;
     line-height: 1;
@@ -289,7 +289,7 @@ footer nav a {
 }
 
 .work-card:hover a::after { /* ホバー時に矢印を少し右に移動 */
-    transform: translateX(5px);
+    transform: translateX(3px); /* 変更：移動距離を5px -> 3pxに */
 }
 
 /* ====================================

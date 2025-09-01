@@ -85,15 +85,33 @@ header nav li:first-child {
 }
 
 header nav a {
+    position: relative; /* 下線の基準位置にするため追加 */
     display: block;
     padding: 12px 0;
     font-family: var(--font-primary);
     font-weight: 400;
     font-size: 13px;
     letter-spacing: 0.1em;
+    text-decoration: none;
 }
 
-/* 現在ページのナビゲーションを薄くする */
+header nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 8px; /* テキストからの距離 */
+    left: 0;
+    width: 100%;
+    height: 1px; /* 下線の太さ */
+    background-color: var(--color-text);
+    transform: scaleX(0); /* 初期状態では非表示 */
+    transform-origin: center;
+    transition: transform 0.3s;
+}
+
+header nav a:hover::after {
+    transform: scaleX(1); /* ホバー時に表示 */
+}
+
 body#about .about a,
 body#works-page .works a {
     opacity: 0.3;
@@ -246,8 +264,19 @@ footer nav a {
 }
 
 .work-card .detail {
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: #fff;
     font-weight: bold;
-    color: var(--color-accent);
+    padding: 8px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.work-card .detail:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 1.0; /* もともとのopacity変化を無効化 */
 }
 
 /* ====================================

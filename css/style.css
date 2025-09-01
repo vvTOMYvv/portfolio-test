@@ -62,10 +62,11 @@ header .header-container {
 
 #logo {
     margin-bottom: 20px;
+    text-align: center;
 }
 
 #logo img {
-    height: 30px; /* スマホでのロゴ高さを指定 */
+    height: 80px;
     width: auto;
 }
 
@@ -629,9 +630,10 @@ footer nav a {
     }
     #logo {
         margin-bottom: 0;
+        text-align: left;
     }
     #logo img {
-        height: 38px;
+        height: 60px;
     }
     header nav ul {
         border: none;

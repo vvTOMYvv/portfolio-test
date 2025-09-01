@@ -428,8 +428,13 @@ footer nav a {
     
     /* トップページ */
     #mainVisual {
-        max-width: var(--content-width);
-        margin: 0 auto;
+        background-color: #d3d3d3; /* グレーの背景色を復活 */
+        text-align: center;       /* 画像を中央に配置 */
+        padding: 0;               /* 不要な余白をリセット */
+        margin-bottom: 80px;      /* 下の余白を調整 */
+    }
+    #mainVisual img {
+        max-width: var(--content-width); /* 画像の最大幅を960pxに制限 */
     }
     #service {
         padding: 80px 5%;

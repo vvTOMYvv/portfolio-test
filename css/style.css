@@ -1,766 +1,495 @@
 @charset "utf-8";
 
 /* ====================================
-// 全体（common）
+// 基本設定 (Variables & Base)
 // ==================================== */
+:root {
+    --font-primary: 'Lato', '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
+    --font-japanese: '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
+    --color-text: #333;
+    --color-gray: #a5a5a5;
+    --color-accent: #007bff;
+    --border-color: #d9d9d9;
+    --content-width: 960px;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
+    font-family: var(--font-japanese);
     font-size: 14px;
-    color: #333;
-    line-height: 1.9;
-    text-align: left;
+    color: var(--color-text);
+    line-height: 1.8;
     -webkit-text-size-adjust: 100%;
 }
+
 a {
-    color: #333;
+    color: var(--color-text);
     text-decoration: none;
-}
-a:hover {
-    color: #333;
-    text-decoration: none;
-}
-.sp {
-    display: block;
-}
-.pc {
-    display: none;
+    transition: opacity 0.3s;
 }
 
-/* header */
+a:hover {
+    opacity: 0.7;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+.pc { display: none; }
+.sp { display: block; }
+.inner {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ====================================
+// ヘッダー (Header)
+// ==================================== */
 header {
-    margin-bottom: 25px;
+    padding: 20px 0;
 }
-header#inner {
-    margin-bottom: 30px;
+
+header .header-container {
+    padding: 0 5%;
 }
-header h1 {
-    margin: 21px 0 25px 0;
-    padding-left: 30px;
+
+#logo {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
     text-align: left;
 }
-header h1 img {
-    width: 196px;
-    height: 25px;
+
+header nav ul {
+    display: flex;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
 }
-nav {
-    margin-bottom: 20px;
-    border-top: 1px solid #d9d9d9;
-}
-nav li {
-    float: left;
+
+header nav li {
     width: 50%;
-    border-bottom: 1px solid #d9d9d9;
     text-align: center;
 }
 
-#about nav li.about a,
-#works nav li.works a {
-    opacity: 0.3;
+header nav li:first-child {
+    border-right: 1px solid var(--border-color);
 }
-nav ul li:nth-child(odd) {
-    background: url(/img/line_nav.gif) repeat-y right top;
-    background-size: 1px 10px;
-}
-nav ul li a {
+
+header nav a {
     display: block;
-    width: 100%;
     padding: 12px 0;
-    font-family: 'Lato', sans-serif;
+    font-family: var(--font-primary);
     font-weight: 400;
     font-size: 13px;
     letter-spacing: 0.1em;
 }
-.socialBtn {
-    text-align: center;
-    margin: 0 auto;
-}
-.socialBtn li {
-    display: inline;
-    margin-right: 12px;
-}
-.socialBtn li.last {
-    margin-right: 0;
-}
-.socialBtn img {
-    width: 28px;
-    height: 28px;
+
+/* 現在ページのナビゲーションを薄くする */
+body#about .about a,
+body#works-page .works a {
+    opacity: 0.3;
 }
 
-/* contents */
-#main h2.ttl {
-    margin-bottom: 40px;
-    text-align: center;
-    line-height: 1.0;
-    font-family: 'Lato', sans-serif;
+
+/* ====================================
+// メインコンテンツ (Main)
+// ==================================== */
+.page-title {
+    font-family: var(--font-primary);
     font-weight: 100;
     font-size: 40px;
     letter-spacing: 0.05em;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-#main.inner h2.ttl {
-    margin-bottom: 25px;
-}
-#main h3.ttl {
-    margin-bottom: 12px;
+.section-title {
+    font-family: var(--font-primary);
+    font-weight: 100;
+    font-size: 36px;
     text-align: center;
-    line-height: 1.0;
-    font-size: 22px;
-    color: #505050;
+    margin-bottom: 40px;
 }
-#main p.ttl {
-    margin-bottom: 20px;
-    text-align: center;
-    line-height: 1.0;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    font-size: 13px;
-    letter-spacing: 0.1em;
-    color: #a5a5a5;
-}
-.contBox {
-    margin: 0 20px;
-}
+
 .toTop {
     text-align: center;
+    margin: 40px 0;
 }
-.toTop a {
-    display: block;
-    margin-bottom: 40px;
-    padding: 8px 20px;
-}
+
 .toTop img {
     width: 22px;
-    height: 14px;
-}
-
-/* footer */
-nav.footer {
-    margin-bottom: 20px;
-}
-#copyright {
-    margin-bottom: 20px;
-    text-align: center;
-    font-size: 12px;
 }
 
 /* ====================================
-// TOP PAGE
+// フッター (Footer)
 // ==================================== */
-#mainVisual {
-    margin-bottom: 30px;
+footer {
+    padding-bottom: 20px;
+}
+
+footer nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+footer nav a {
+    font-family: var(--font-primary);
+    font-weight: 400;
+    letter-spacing: 0.1em;
+}
+
+#copyright {
+    font-size: 12px;
     text-align: center;
 }
+
+/* ====================================
+// トップページ (Index Page)
+// ==================================== */
 #mainVisual img {
     width: 100%;
-    max-width: 480px;
-    height: auto;
-}
-#mainVisual .pc {
-    display: none;
-}
-#mainVisual .sp {
-    display: block;
 }
 
-/* SERVICE SECTION */
+/* Service Section */
 #service {
-    text-align: center;
-    margin-bottom: 60px;
-    padding: 0 5%;
-}
-#service .ttl {
-    margin-bottom: 30px;
-}
-.service-container section {
-    width: 100%;
-    margin-bottom: 30px;
-    box-sizing: border-box;
-}
-.service-container section .ttl {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-.service-container section p.ttl {
-    font-size: 14px;
-    font-weight: normal;
-    color: #a5a5a5;
-    margin-bottom: 10px;
-}
-.service-container section .icon {
-    margin-bottom: 20px;
-}
-.service-container section .icon img {
-    width: 60px;
-    height: auto;
-}
-.service-container section .text01 {
-    font-size: 14px;
-    line-height: 1.6;
-    text-align: left;
-}
-.service-container section.last {
-    margin-bottom: 0;
+    padding: 60px 5%;
 }
 
-/* WORKS SECTION (TOP PAGE) */
-#works {
-    padding: 0 5%;
-    margin-bottom: 60px;
-}
-#works .worksList {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+#service .service-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 40px;
+}
+
+#service .service-item h3 {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+#service .service-item .sub-ttl {
+    font-family: var(--font-primary);
+    font-size: 13px;
+    color: var(--color-gray);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#service .service-item .icon {
+    text-align: center;
+    margin-bottom: 20px;
+}
+#service .service-item .icon img {
+    width: 60px;
+}
+
+#service .service-item p {
     text-align: left;
 }
-#works .worksList li {
-    width: 100%;
-    margin-bottom: 20px;
-    position: relative;
-    box-sizing: border-box;
+
+/* Works Section */
+#works {
+    padding: 60px 5%;
+    background-color: #f9f9f9;
 }
-#works .worksList li:last-child {
-    margin-bottom: 0;
+
+#works .worksList {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
-#works .worksList .photo img {
-    width: 100%;
-    height: auto;
+
+.work-card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    overflow: hidden;
+}
+
+.work-card .photo a {
     display: block;
 }
-#works .worksList li .work-title {
+
+.work-card .photo img {
+    width: 100%;
+    transition: transform 0.3s;
+}
+
+.work-card .photo a:hover img {
+    transform: scale(1.05);
+}
+
+.work-card .work-info {
+    padding: 15px;
+}
+
+.work-card .work-title {
     font-size: 16px;
     font-weight: bold;
-    margin-top: 10px;
-    margin-bottom: 5px;
-    line-height: 1.2;
+    margin-bottom: 10px;
 }
-#works .worksList li .cont {
+
+.work-card .cont {
     font-size: 14px;
-    line-height: 1.6;
     margin-bottom: 15px;
 }
-#works .worksList li .detail {
-    display: inline-block;
-    font-size: 14px;
+
+.work-card .detail {
     font-weight: bold;
-    color: #007bff;
-    text-decoration: none;
-    line-height: 1;
-}
-#works .worksList li .detail:hover {
-    text-decoration: underline;
+    color: var(--color-accent);
 }
 
 /* ====================================
-// ABOUT PAGE
+// Aboutページ (About Page)
 // ==================================== */
-#about .contBox {
-    padding: 0 5%;
+#about {
+    padding: 0 5% 60px;
 }
 
-/* h2タイトルの調整 */
-#about .ttl.large {
-    margin-bottom: 40px;
-    text-align: center;
-}
-
-#about .profile-container {
+.profile-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 30px;
 }
 
-#about .profile-sidebar {
+.profile-sidebar {
     text-align: center;
-    margin-bottom: 40px;
 }
 
-#about .profile-image {
-    width: 180px;
-    height: 180px;
+.profile-image {
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     margin-bottom: 20px;
 }
 
-#about .profile-name .name-jp {
-    font-size: 18px;
+.profile-name .name-jp {
+    font-size: 20px;
     font-weight: bold;
 }
 
-#about .profile-name .name-en {
+.profile-name .name-en {
     font-size: 12px;
-    color: #888;
+    color: var(--color-gray);
     letter-spacing: 0.5px;
 }
 
-#about .profile-main {
-    width: 100%;
-}
-
-#about .profile-main .txtBox {
+.profile-main .txtBox {
     margin-bottom: 40px;
-    line-height: 1.8;
 }
 
-#about .profile-sub-ttl {
+.profile-sub-ttl {
     font-size: 18px;
     font-weight: bold;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    margin: 40px 0 20px;
     padding-bottom: 5px;
     border-bottom: 1px solid #eee;
 }
 
-#about .profile-list {
+.profile-list {
     display: flex;
     flex-wrap: wrap;
-    line-height: 1.8;
-    margin-bottom: 10px;
+    row-gap: 10px;
 }
 
-#about .profile-list dt {
-    width: 80px;
-    padding-right: 15px;
+.profile-list dt {
+    width: 100px;
     flex-shrink: 0;
     font-weight: bold;
-    color: #555;
 }
 
-#about .profile-list dd {
-    width: calc(100% - 95px);
-    margin-left: 0;
+.profile-list dd {
+    width: calc(100% - 100px);
 }
 
-#about .profile-list.detail dt {
+.profile-list.detail dt {
     width: 150px;
 }
-
-#about .profile-list.detail dd {
-    width: calc(100% - 165px);
+.profile-list.detail dd {
+    width: calc(100% - 150px);
 }
+
 
 /* ====================================
-// WORKS PAGE
+// Worksページ (Works Page)
 // ==================================== */
-#works-page .contBox {
-    padding: 0 5%;
+#works-page .inner {
+    padding-bottom: 60px;
 }
 
-#works-page #works-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+#works-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
-#works-page #works-list li {
-    width: 100%;
-    margin-bottom: 60px; /* 各作品間の余白 */
-    box-sizing: border-box;
-    text-align: left;
-}
-
-#works-page #works-list li:last-child {
-    margin-bottom: 0;
-}
-
-#works-page .work-image {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 20px;
+#works-list li {
     border: 1px solid #eee;
 }
 
-#works-page .work-info {
-    padding: 0 10px; /* テキストの左右に少し余白を追加 */
+#works-list .work-image {
+    width: 100%;
+    border-bottom: 1px solid #eee;
 }
 
-#works-page .work-title {
+#works-list .work-info {
+    padding: 20px;
+}
+
+#works-list .work-title {
     font-size: 20px;
     font-weight: bold;
-    margin: 0 0 5px 0;
-    line-height: 1.3;
+    margin-bottom: 5px;
 }
 
-#works-page .work-skill {
-    font-size: 14px;
-    color: #888;
-    margin: 0 0 10px 0;
-    line-height: 1.4;
+#works-list .work-skill {
+    font-size: 13px;
+    color: var(--color-gray);
+    margin-bottom: 15px;
 }
 
-#works-page .work-desc {
+#works-list .work-desc {
     font-size: 16px;
-    line-height: 1.7;
-    margin: 0;
 }
 
-/* ====================================
-// Media Queries
-// ==================================== */
-/* ----- Tablet (760px以上) ----- */
-@media only screen and (min-width: 760px) {
-    /* common.css から統合された部分 */
-    .sp {
-        display: none;
+
+/* ==================================================
+// タブレット以上 (Tablet & over / 768px~)
+// ================================================== */
+@media (min-width: 768px) {
+    .pc { display: block; }
+    .sp { display: none; }
+    
+    .inner {
+        max-width: var(--content-width);
     }
-    .pc {
-        display: block;
-    }
+    
+    /* Header */
     header {
-        position: relative;
-        max-width: 960px;
-        height: 270px;
+        padding: 40px 0;
+    }
+    header .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: var(--content-width);
         margin: 0 auto;
+        padding: 0 40px;
     }
-    header#inner {
-        margin-bottom: 30px;
-    }
-    header h1 {
-        position: absolute;
-        top: 107px;
-        left: 50px;
-        margin: 0;
-        padding-left: 0;
-        text-align: center;
-    }
-    header h1 img {
-        width: 275px;
-        height: 35px;
-    }
-    nav {
-        position: absolute;
-        bottom: 30px;
-        right: 30px;
+    #logo {
         margin-bottom: 0;
-        border-top: none;
     }
-    nav li {
-        margin-left: 50px;
-        display: inline;
-        float: none;
-        border-bottom: none;
-        text-align: right;
+    header nav ul {
+        border: none;
+        gap: 40px;
     }
-    nav ul li:nth-child(odd) {
-        background: none;
+    header nav li {
+        width: auto;
     }
-    nav ul li a {
-        display: inline;
-        font-size: 14px;
-        font-weight: 400;
-        letter-spacing: 0.1em;
+    header nav li:first-child {
+        border-right: none;
     }
-    .socialBtn {
-        position: absolute;
-        top: 112px;
-        right: 30px;
-    }
-    .socialBtn li {
-        display: inline;
-        margin-right: 14px;
-    }
-    .socialBtn li.last {
-        margin-right: 0;
-    }
-    .socialBtn img {
-        width: 22px;
-        height: 22px;
-    }
-    #main.inner {
-        max-width: 960px;
-        padding: 0;
-        margin: 0 auto;
-    }
-    #main h2.ttl.large {
-        margin: 0 0 70px 0;
+
+    /* Titles */
+    .page-title {
         font-size: 46px;
+        margin-bottom: 60px;
         text-align: left;
     }
-    .contBox {
-        margin: 0 40px;
-    }
-    footer {
-        max-width: 960px;
-        margin: 0 5%;
-        padding-bottom: 20px;
-    }
-    nav.footer {
-        position: relative;
-        float: left;
-        width: 60%;
-        margin: 60px 0 0 30px;
-    }
-    nav.footer a {
-        font-size: 14px;
-        font-weight: 400;
-    }
-    nav.footer li {
-        margin: 0 40px 0 0;
-    }
-    #copyright {
-        float: right;
-        width: 40%;
-        margin-top: 32px;
-        margin-bottom: 0;
-        text-align: right;
-    }
-
-    /* TOP PAGE */
-    #mainVisual {
-        margin-bottom: 80px;
-        background-color: #d3d3d3;
-        text-align: center;
-    }
-    #mainVisual img {
-        max-width: 960px;
-        height: auto;
-    }
-    #mainVisual .pc {
-        display: block;
-    }
-    #mainVisual .sp {
-        display: none;
-    }
-    #service {
-        margin-bottom: 80px;
-    }
-    .service-container {
-        display: flex;
-        justify-content: center;
-        gap: 2%;
-    }
-    .service-container section {
-        width: 32%;
-        margin-bottom: 0;
-    }
-    #works {
-        max-width: 960px;
-        margin: 0 auto 80px;
-        padding: 0;
-    }
-    #works .worksList {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 2%;
-    }
-    #works .worksList li {
-        width: 32%;
-        margin-bottom: 20px;
-    }
-    
-    /* ABOUT PAGE */
-    #about .fBox01 {
-        margin: 0 40px;
-    }
-    #about .fBox01 .imgFace {
-        float: none;
-        width: 100%;
-        text-align: center;
-        margin-bottom: 40px;
-    }
-    #about .fBox01 .fBoxRight {
-        padding-left: 0;
-    }
-    
-    /* WORKS PAGE */
-    #works-page .worksList {
-        max-width: 920px;
-        margin: 0 auto;
-        padding: 0;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 4%;
-    }
-    #works-page .worksList li {
-        box-sizing: border-box;
-        width: 48%;
+    .section-title {
+        font-size: 40px;
         margin-bottom: 60px;
     }
-    #works-page .worksList li:nth-child(2n) {
-        margin-right: 0;
+    
+    /* トップページ */
+    #service {
+        padding: 80px 5%;
     }
-    #works-page .worksList li .readLast {
-        text-align: center;
+    #service .service-container {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 5%;
+    }
+    #service .service-item {
+        width: 30%;
+    }
+
+    #works {
+        padding: 80px 0;
+    }
+    #works .inner {
+        max-width: var(--content-width);
+    }
+    #works .worksList {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 3%;
+    }
+    #works .worksList .work-card {
+        width: 31%;
+    }
+    
+    /* Aboutページ */
+    #about {
+        padding-bottom: 80px;
+    }
+    .profile-container {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 50px;
+    }
+    .profile-sidebar {
+        width: 250px;
+        flex-shrink: 0;
+        text-align: left;
+    }
+    .profile-main {
+        flex-grow: 1;
+    }
+
+    /* Worksページ */
+    #works-page .inner {
+        padding-bottom: 80px;
+    }
+    #works-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 4%;
+        row-gap: 50px;
+    }
+    #works-list li {
+        width: 48%;
     }
 }
 
-/* ----- PC (961px以上) ----- */
-@media only screen and (min-width: 961px) {
-    /* common.css から統合された部分 */
+/* ==================================================
+// PCのみ (PC only / 961px~)
+// ================================================== */
+@media (min-width: 961px) {
+    body {
+        font-size: 16px;
+    }
+
     a:hover {
-        text-decoration: underline;
-    }
-    header h1 {
-        position: absolute;
-        top: 105px;
-        left: 0;
-    }
-    nav {
-        position: absolute;
-        bottom: 30px;
-        right: 0;
-    }
-    .socialBtn {
-        position: absolute;
-        top: 112px;
-        right: 10px;
-    }
-    #main.inner {
-        max-width: 960px;
-        padding: 0;
-        margin: 0 auto;
-    }
-    .contBox {
-        margin: 0;
-    }
-    footer {
-        max-width: 960px;
-        margin: 0 auto;
-    }
-    nav.footer {
-        margin-left: 0;
+        opacity: 0.7;
+        text-decoration: none;
     }
 
-    /* TOP PAGE */
-    #service {
-        margin-bottom: 100px;
-    }
-    .service-container {
-        gap: 5%;
-    }
-    .service-container section {
-        width: 30%;
-    }
-    #works {
-        margin-bottom: 100px;
-    }
-    #works .worksList {
-        gap: 5%;
-    }
-    #works .worksList li {
-        width: 30%;
-        margin-bottom: 20px;
-    }
-    
-    /* ABOUT PAGE (REVISED) */
-    /* スマホ表示のスタイル（ベース） */
-    #about .profile-container {
-        display: flex;
-        flex-direction: column; /* 縦並び */
-        align-items: center; /* 中央揃え */
-        padding: 0 20px; /* 左右に余白を追加 */
-    }
-
-    #about .profile-sidebar {
-        text-align: center;
-        margin-bottom: 40px;
-        width: 100%;
-    }
-
-    #about .profile-image {
-        width: 180px;
-        height: 180px;
-        object-fit: cover;
-        margin-bottom: 20px;
-    }
-
-    #about .profile-name .name-jp {
-        font-size: 18px;
-        font-weight: bold;
-    }
-
-    #about .profile-name .name-en {
-        font-size: 12px;
-        color: #888;
-        letter-spacing: 0.5px;
-    }
-
-    #about .profile-main {
-        width: 100%;
-    }
-
-    #about .profile-main .txtBox {
-        margin-bottom: 40px;
-        line-height: 1.8;
-    }
-
-    #about .profile-sub-ttl {
-        font-size: 18px;
-        font-weight: bold;
-        margin-top: 40px;
-        margin-bottom: 20px;
-        padding-bottom: 5px;
-        border-bottom: 1px solid #eee;
-    }
-
-    #about .profile-list {
-        display: flex;
-        flex-wrap: wrap;
-        line-height: 1.8;
-        margin-bottom: 10px;
-    }
-
-    #about .profile-list dt {
-        width: 80px;
-        padding-right: 15px;
-        flex-shrink: 0;
-        font-weight: bold;
-        color: #555;
-    }
-
-    #about .profile-list dd {
-        width: calc(100% - 95px); /* dtの幅とpaddingを引いた残り */
-        margin-left: 0;
-    }
-
-    #about .profile-list.detail dt {
-        width: 150px;
-    }
-
-    #about .profile-list.detail dd {
-        width: calc(100% - 165px);
-    }
-
-    /* ==========================================================
-    タブレットとPC表示のスタイル（画面幅768px以上で適用）
-    ========================================================== */
-    @media only screen and (min-width: 768px) {
-
-        /* ★★★ 問題1の修正：メインコンテンツ全体を中央揃え ★★★ */
-        #main.inner {
-            max-width: 960px; /* コンテンツの最大幅を指定 */
-            margin: 0 auto; /* 上下のマージンは0、左右のマージンは自動（→中央揃え） */
-            padding: 0 20px; /* コンテンツの左右に少し余白を持たせる */
-        }
-        
-        /* ★★★ 問題2の修正：2カラムレイアウトを適用 ★★★ */
-        #about .profile-container {
-            flex-direction: row; /* 横並び */
-            align-items: flex-start; /* 上揃え */
-            justify-content: space-between;
-            padding: 0;
-        }
-
-        #about .profile-sidebar {
-            width: 250px;
-            flex-shrink: 0;
-            margin-bottom: 0;
-            text-align: left;
-        }
-
-        #about .profile-main {
-            width: calc(100% - 300px); /* 左カラムとの間に余白を持たせる */
-        }
+    #works .worksList .work-card {
+       margin-bottom: 20px;
     }
 }

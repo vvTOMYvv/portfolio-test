@@ -2,36 +2,31 @@
 <html lang="ja">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | Ryo's Portfolio</title>
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Lato:100,700,400' rel='stylesheet' type='text/css'>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="js/common.js"></script>
 </head>
 <body id="about">
     <header>
-        <h1 id="logo">
-            <a href="index.html">
-                Ryo's Portfolio
-            </a>
-        </h1>
-        <nav>
-            <ul>
-                <li class="about"><a href="about.html">About</a></li>
-                <li class="works"><a href="works.html">Works</a></li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <h1 id="logo">
+                <a href="index.html">Ryo's Portfolio</a>
+            </h1>
+            <nav>
+                <ul>
+                    <li class="about"><a href="about.html">About</a></li>
+                    <li class="works"><a href="works.html">Works</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <div id="main" class="inner">
-        <h2 class="ttl large">About</h2>
+        <h2 class="page-title">About</h2>
 
         <div class="profile-container">
-
             <aside class="profile-sidebar">
                 <img src="images/about/img_about.jpg" alt="プロフィール写真" class="profile-image">
                 <div class="profile-name">
@@ -49,13 +44,10 @@
                 <dl class="profile-list">
                     <dt>氏名</dt>
                     <dd>富浦 凌</dd>
-
                     <dt>生年月日</dt>
                     <dd>1999年1月27日</dd>
-
                     <dt>所在地</dt>
                     <dd>神奈川県横浜市</dd>
-
                     <dt>好きなこと</dt>
                     <dd>ラーメンを食べる、温泉に浸かる、おウマさんの走りを応援する</dd>
                 </dl>
@@ -64,13 +56,10 @@
                 <dl class="profile-list detail">
                     <dt>System Support</dt>
                     <dd>GA4/GTM、BigQuery、BIツール等データ計測環境および分析基盤の構築</dd>
-                    
                     <dt>Project Management</dt>
                     <dd>データ計測基盤の構築やWeb制作における全般のプロジェクトマネジメント</dd>
-                    
                     <dt>Data&Design Analysis</dt>
                     <dd>定性・定量調査、カスタマージャーニー/ユーザーインサイト分析</dd>
-                    
                     <dt>AI Enginner</dt>
                     <dd>Pythonを利用したAPI構築、データの前処理からモデルの評価、デプロイまでのサポート</dd>
                 </dl>
@@ -79,30 +68,29 @@
                 <dl class="profile-list detail">
                     <dt>2025年</dt>
                     <dd>統計検定2級、プライバシー認定資格</dd>
-
                     <dt>2024年</dt>
                     <dd>基本情報技術者試験、Cloud Digital Leader</dd>
-
                     <dt>2023年</dt>
                     <dd>ITパスポート、Google アナリティクス個人認定資格、Google Analytics Certification</dd>
-
                     <dt>2022年</dt>
                     <dd>色彩検定3級</dd>
                 </dl>
             </main>
         </div>
-        </div>
+    </div>
     
     <p class="toTop"><a href="#top"><img src="images/icon_to_top.gif" alt="トップへ戻る"></a></p>
 
     <footer>
-        <nav class="footer">
-            <ul>
-                <li class="about"><a href="about.html">About</a></li>
-                <li class="works"><a href="works.html">Works</a></li>
-            </ul>
-        </nav>
-        <p id="copyright"><small>&#169; Made by Ryo Tomiura.</small></p>
+        <div class="inner">
+            <nav>
+                <ul>
+                    <li class="about"><a href="about.html">About</a></li>
+                    <li class="works"><a href="works.html">Works</a></li>
+                </ul>
+            </nav>
+            <p id="copyright"><small>&#169; Made by Ryo Tomiura.</small></p>
+        </div>
     </footer>
 </body>
 </html>

@@ -2,29 +2,25 @@
 <html lang="ja">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ryo's Portfolio</title>
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Lato:100,700,400' rel='stylesheet' type='text/css'>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="js/common.js"></script>
 </head>
 <body id="top">
     <header>
-        <h1 id="logo">
-            <a href="index.html">
-                Ryo's Portfolio
-            </a>
-        </h1>
-        <nav>
-            <ul class="cf">
-                <li class="about"><a href="about.html">About</a></li>
-                <li class="works"><a href="works.html">Works</a></li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <h1 id="logo">
+                <a href="index.html">Ryo's Portfolio</a>
+            </h1>
+            <nav>
+                <ul>
+                    <li class="about"><a href="about.html">About</a></li>
+                    <li class="works"><a href="works.html">Works</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     
     <div id="main">
@@ -37,150 +33,136 @@
             </div>
         </div>
         
-        <section id="service" class="cf">
-            <h2 class="ttl">Service</h2>
+        <section id="service">
+            <h2 class="section-title">Service</h2>
             <div class="service-container">
-                <section>
-                    <h3 class="ttl">システムサポート</h3>
-                    <p class="ttl">System Support</p>
+                <div class="service-item">
+                    <h3>システムサポート</h3>
+                    <p class="sub-ttl">System Support</p>
                     <p class="icon">
                         <img src="images/index/icon_service01.png" alt="システム管理_icon">
                     </p>
-                    <p class="text01">
+                    <p>
                         GA4/GTM、BigQuery、BIツール等データ計測環境および分析基盤の構築をサポートします。企画〜要件定義フェーズではお客様がデータの取り扱いについてきちんと理解されるまで寄り添います。
                     </p>
-                </section>
-                <section>
-                    <h3 class="ttl">プロジェクト管理</h3>
-                    <p class="ttl">Project Management</p>
+                </div>
+                <div class="service-item">
+                    <h3>プロジェクト管理</h3>
+                    <p class="sub-ttl">Project Management</p>
                     <p class="icon">
                         <img src="images/index/icon_service02.png" alt="データサイエンティスト_icon">
                     </p>
-                    <p class="text01">
+                    <p>
                         データ計測基盤の構築やWeb制作における全般のプロジェクトマネジメントを担当します。ガントチャートをベースとしたタスク管理と細やかなコミュニケーションを心がけた信頼構築を得意としています。
                     </p>
-                </section>
-                <section class="last">
-                    <h3 class="ttl">データ/デザイン分析</h3>
-                    <p class="ttl">Data&Design Analysis</p>
+                </div>
+                <div class="service-item">
+                    <h3>データ/デザイン分析</h3>
+                    <p class="sub-ttl">Data&Design Analysis</p>
                     <p class="icon">
                         <img src="images/index/icon_service03.png" alt="AIエンジニア_icon">
                     </p>
-                    <p class="text01">
+                    <p>
                         定性・定量調査から課題を抽出、デザインとデータの両方の観点で具体的な改善施策案を提案します。KPI策定ではカスタマージャーニーマップの作成、ユーザーインサイトの把握を目的とした仮説検証もサポートします。
                     </p>
-                </section>
+                </div>
             </div>
         </section>
         
-        <section id="works" class="cf">
-            <h2 class="ttl">Works</h2>
-            <ul class="worksList">
-                <li>
-                    <p class="photo">
-                        <a href="works.html#works9">
-                            <img src="images/index/img_works/img_works9_index.jpg" alt="マツモトキヨシ様">
-                        </a>
-                    </p>
-                    <p class="work-title">マツモトキヨシ様</p>
-                    <p class="cont">eコマース設定を中心としたGA4のデータ計測基盤の構築とサイト流入を計測するためのutmパラメータの定義を担当</p>
-                    <a href="works.html#works9" class="detail">more</a>
-                </li>
-                <li>
-                    <p class="photo">
-                        <a href="works.html#works8">
-                            <img src="images/index/img_works/img_works8_index.jpg" alt="TOHOシネマズ様">
-                        </a>
-                    </p>
-                    <p class="work-title">TOHOシネマズ様</p>
-                    <p class="cont">アプリを含むGA4のデータ計測基盤の構築と作品サイトLP単位のGA4プロパティの新規導入およびサポート対応を含む運用支援を担当</p>
-                    <a href="works.html#works8" class="detail">more</a>
-                </li>
-                <li>
-                    <p class="photo">
-                        <a href="works.html#works7">
-                            <img src="images/index/img_works/img_works7_index.jpg" alt="東京都様">
-                        </a>
-                    </p>
-                    <p class="work-title">東京都様</p>
-                    <p class="cont">GA4とLooker Studioの導入支援からサイト改善施策の提案、GA4データ分析レクチャー会の講師を担当</p>
-                    <a href="works.html#works7" class="detail">more</a>
-                </li>
-                <li>
-                    <p class="photo">
-                        <a href="works.html#works6">
-                            <img src="images/index/img_works/img_works6_index.jpg" alt="朝日新聞社様">
-                        </a>
-                    </p>
-                    <p class="work-title">朝日新聞社様</p>
-                    <p class="cont">GA4をデータソースとしたLooker Studioの構築、ダッシュボード表示項目の提案を含むプロジェクト全般のマネジメントを担当</p>
-                    <a href="works.html#works6" class="detail">more</a>
-                </li>
-                <li>
-                    <p class="photo">
-                        <a href="works.html#works5">
-                            <img src="images/index/img_works/img_works5_index.jpg" alt="日経BP様">
-                        </a>
-                    </p>
-                    <p class="work-title">日経BP様</p>
-                    <p class="cont">新規サイトへのGA4/GTM、BigQuery、Looker Studioの導入支援、約1年規模の案件におけるプロジェクトマネージャーを担当</p>
-                    <a href="works.html#works5" class="detail">more</a>
-                </li>
-                <li>
-                    <p class="photo">
-                        <a href="works.html#works4">
-                            <img src="images/index/img_works/img_works4_index.jpg" alt="日立製作所様">
-                        </a>
-                    </p>
-                    <p class="work-title">日立製作所様</p>
-                    <p class="cont">ダッシュボード（Looker Studio）の運用サポートとGA4を活用したデータ利活用に関する提案とお問いあわせ対応</p>
-                    <a href="works.html#works4" class="detail">more</a>
-                </li>
-                <li>
-                    <p class="photo">
-                        <a href="works.html#works3">
-                            <img src="images/index/img_works/img_works3_index.jpg" alt="LivePocket様">
-                        </a>
-                    </p>
-                    <p class="work-title">LivePocket様</p>
-                    <p class="cont">新規アプリのGA4データ計測基盤の構築と他部署対応のシステム基盤構築チームとの連携を含むプロジェクトマネジメントを担当</p>
-                    <a href="works.html#works3" class="detail">more</a>
-                </li>
-                <li>
-                    <p class="photo">
-                        <a href="works.html#works2">
-                            <img src="images/index/img_works/img_works2_index.jpg" alt="東急ストア様">
-                        </a>
-                    </p>
-                    <p class="work-title">東急ストア様</p>
-                    <p class="cont">LPページのワイヤーフレーム作成とファネル分析を含む定性調査に基づくサイト改善施策の提案を担当</p>
-                    <a href="works.html#works2" class="detail">more</a>
-                </li>
-                <li>
-                    <p class="photo">
-                        <a href="works.html#works1">
-                            <img src="images/index/img_works/img_works1_index.jpg" alt="三菱UFJモルガン・スタンレー証券様">
-                        </a>
-                    </p>
-                    <p class="work-title">三菱UFJモルガン・スタンレー証券様</p>
-                    <p class="cont">コーポレートサイトのワイヤーフレーム作成とブランドイメージに沿ったサービスイメージ画像の提案を担当</p>
-                    <a href="works.html#works1" class="detail">more</a>
-                </li>
-            </ul>
+        <section id="works">
+            <div class="inner">
+                <h2 class="section-title">Works</h2>
+                <div class="worksList">
+                    <article class="work-card">
+                        <p class="photo">
+                            <a href="works.html#works9">
+                                <img src="images/index/img_works/img_works9_index.jpg" alt="マツモトキヨシ様">
+                            </a>
+                        </p>
+                        <div class="work-info">
+                            <p class="work-title">マツモトキヨシ様</p>
+                            <p class="cont">eコマース設定を中心としたGA4のデータ計測基盤の構築とサイト流入を計測するためのutmパラメータの定義を担当</p>
+                            <a href="works.html#works9" class="detail">more</a>
+                        </div>
+                    </article>
+                    <article class="work-card">
+                        <p class="photo">
+                            <a href="works.html#works8">
+                                <img src="images/index/img_works/img_works8_index.jpg" alt="TOHOシネマズ様">
+                            </a>
+                        </p>
+                        <div class="work-info">
+                            <p class="work-title">TOHOシネマズ様</p>
+                            <p class="cont">アプリを含むGA4のデータ計測基盤の構築と作品サイトLP単位のGA4プロパティの新規導入およびサポート対応を含む運用支援を担当</p>
+                            <a href="works.html#works8" class="detail">more</a>
+                        </div>
+                    </article>
+                    <article class="work-card">
+                        <p class="photo">
+                            <a href="works.html#works7">
+                                <img src="images/index/img_works/img_works7_index.jpg" alt="東京都様">
+                            </a>
+                        </p>
+                        <div class="work-info">
+                            <p class="work-title">東京都様</p>
+                            <p class="cont">GA4とLooker Studioの導入支援からサイト改善施策の提案、GA4データ分析レクチャー会の講師を担当</p>
+                            <a href="works.html#works7" class="detail">more</a>
+                        </div>
+                    </article>
+                    <article class="work-card">
+                        <p class="photo">
+                            <a href="works.html#works6">
+                                <img src="images/index/img_works/img_works6_index.jpg" alt="朝日新聞社様">
+                            </a>
+                        </p>
+                        <div class="work-info">
+                            <p class="work-title">朝日新聞社様</p>
+                            <p class="cont">GA4をデータソースとしたLooker Studioの構築、ダッシュボード表示項目の提案を含むプロジェクト全般のマネジメントを担当</p>
+                            <a href="works.html#works6" class="detail">more</a>
+                        </div>
+                    </article>
+                    <article class="work-card">
+                        <p class="photo">
+                            <a href="works.html#works5">
+                                <img src="images/index/img_works/img_works5_index.jpg" alt="日経BP様">
+                            </a>
+                        </p>
+                        <div class="work-info">
+                            <p class="work-title">日経BP様</p>
+                            <p class="cont">新規サイトへのGA4/GTM、BigQuery、Looker Studioの導入支援、約1年規模の案件におけるプロジェクトマネージャーを担当</p>
+                            <a href="works.html#works5" class="detail">more</a>
+                        </div>
+                    </article>
+                    <article class="work-card">
+                        <p class="photo">
+                            <a href="works.html#works4">
+                                <img src="images/index/img_works/img_works4_index.jpg" alt="日立製作所様">
+                            </a>
+                        </p>
+                        <div class="work-info">
+                            <p class="work-title">日立製作所様</p>
+                            <p class="cont">ダッシュボード（Looker Studio）の運用サポートとGA4を活用したデータ利活用に関する提案とお問いあわせ対応</p>
+                            <a href="works.html#works4" class="detail">more</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
         </section>
 
         <p class="toTop"><a href="#top"><img src="images/icon_to_top.gif" alt="トップへ戻る"></a></p>
 
     </div>
     
-    <footer class="cf">
-        <nav class="footer">
-            <ul class="cf">
-                <li class="about"><a href="about.html">About</a></li>
-                <li class="works"><a href="works.html">Works</a></li>
-            </ul>
-        </nav>
-        <p id="copyright"><small>&#169; Made by Ryo Tomiura.</small></p>
+    <footer>
+        <div class="inner">
+            <nav>
+                <ul>
+                    <li class="about"><a href="about.html">About</a></li>
+                    <li class="works"><a href="works.html">Works</a></li>
+                </ul>
+            </nav>
+            <p id="copyright"><small>&#169; Made by Ryo Tomiura.</small></p>
+        </div>
     </footer>
 </body>
 </html>

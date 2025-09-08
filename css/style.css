@@ -60,14 +60,10 @@ header .header-container {
     padding: 0 5%;
 }
 
-#logo {
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-#logo img {
-    height: 80px;
-    width: auto;
+header h1 {
+    font-family: var(--font-primary);
+    font-weight: 100;
+    letter-spacing: 0.05em;
 }
 
 header nav ul {
